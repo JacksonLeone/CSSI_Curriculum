@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://cssicurriculum.withgoogle.com/javaScript/lecture-guides/01-intro-js.html -->
+<html class="gr__cssicurriculum_withgoogle_com mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width, initial-scale=1" name="viewport"><title>Intro to JavaScript</title><meta content="
+          
+              Intro to JavaScript
+          " name="description"><link href="https://cssicurriculum.withgoogle.com/favicon.ico" rel="shortcut icon"><link href="./Intro to JavaScript_files/material.indigo-yellow.min.css" rel="stylesheet"><link href="./Intro to JavaScript_files/icon" rel="stylesheet"><script async="" src="./Intro to JavaScript_files/analytics.js.download"></script><script defer="" src="./Intro to JavaScript_files/material.min.js.download"></script><style>html,body{font-family:'Roboto','Helvetica',sans-serif;margin:0;padding:0}#verification_sent{display:None}.cssix-intro.mdl-card{width:99%;margin-bottom:2em}.cssix-intro.mdl-card>.mdl-card__supporting_text{padding:1em}.mdl-layout__header-row h3 a{color:white;text-decoration:none}#cssilogo_header{content:url('/cssilogo.png');width:80%}.admin_nav_link{color:red}.mdl-cssix .mdl-layout__header-row{padding-left:40px}.mdl-cssix .mdl-layout.is-small-screen .mdl-layout__header-row h3{font-size:inherit;padding-left:12px}.mdl-cssix .mdl-layout__tab-bar-button{display:none}.mdl-cssix .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button{display:none}.mdl-cssix .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,.mdl-cssix .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container{overflow:visible}.cssi-main{overflow-x:visible!important;overflow-y:visible!important;overflow:visible!important}.mdl-cssix .mdl-layout__tab-bar-container{height:64px}.mdl-cssix .mdl-layout__tab-bar{padding:0;padding-left:16px;box-sizing:border-box;height:100%;width:100%}.mdl-cssix .mdl-layout__tab-bar .mdl-layout__tab{height:64px;line-height:64px;color:white}.mdl-cssix .mdl-layout__tab-bar .mdl-layout__tab.is-active::after{height:4px}.mdl-cssix main>.mdl-layout__tab-panel{padding:8px;padding-top:48px}.mdl-layout__tab#header_logout{background-color:red}.mdl-cssix .mdl-card{height:auto;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.mdl-cssix .mdl-card>*{height:auto}.mdl-cssix .mdl-card .mdl-card__supporting-text{margin:40px;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;padding:0;color:inherit;width:calc(100% - 80px)}.mdl-cssix .mdl-card__supporting-text h4{margin-top:0;margin-bottom:20px}.mdl-cssix .mdl-card__actions{margin:0;padding:4px 40px;color:inherit}.mdl-cssix .mdl-card__actions a{color:#00BCD4;margin:0}.mdl-cssix .mdl-card__actions a:hover,.mdl-cssix .mdl-card__actions a:active{color:inherit;background-color:transparent}.mdl-cssix .mdl-card__supporting-text+.mdl-card__actions{border-top:1px solid rgba(0,0,0,0.12)}.mdl-cssix #add{position:absolute;right:40px;top:36px;z-index:999}.mdl-list__item{min-height:.4em;padding:.3em}.material-icons.md-18{font-size:18px}.material-icons.md-24{font-size:24px}.material-icons.md-36{font-size:36px}.material-icons.md-48{font-size:48px}.post-list .toc_icon{vertical-align:middle;margin:.1em 1em}.mdl-cssix .mdl-layout__content section:not(:last-of-type){position:relative;margin-bottom:48px}.mdl-cssix section.section--center{max-width:860px}.mdl-cssix #features section.section--center{max-width:620px}.mdl-cssix section>header{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.mdl-cssix section>.section__play-btn{min-height:200px}.mdl-cssix section>header>.material-icons{font-size:3rem}.mdl-cssix section>button{position:absolute;z-index:99;top:8px;right:8px}.mdl-cssix section .section__circle{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:1;-ms-flex-negative:1;flex-shrink:1}.mdl-cssix section .section__text{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;padding-top:8px}.mdl-cssix section .section__text h5{font-size:inherit;margin:0;margin-bottom:.5em}.mdl-cssix section .section__text a{text-decoration:none}.mdl-cssix section .section__circle-container>.section__circle-container__circle{width:64px;height:64px;border-radius:32px;margin:8px 0}.mdl-cssix section.section--footer .section__circle--big{width:100px;height:100px;border-radius:50px;margin:8px 32px}.mdl-cssix .is-small-screen section.section--footer .section__circle--big{width:50px;height:50px;border-radius:25px;margin:8px 16px}.mdl-cssix section.section--footer{padding:64px 0;margin:0 -8px -8px -8px}.mdl-cssix section.section--center .section__text:not(:last-child){border-bottom:1px solid rgba(0,0,0,.13)}.mdl-cssix .mdl-card .mdl-card__supporting-text>h3:first-child{margin-bottom:24px}.mdl-cssix .mdl-layout__tab-panel:not(#overview){background-color:white}.mdl-cssix #features section{margin-bottom:72px}.mdl-cssix #features h4,#features h5{margin-bottom:16px}.mdl-cssix .toc{border-left:4px solid #C1EEF4;margin:24px;padding:0;padding-left:8px;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.mdl-cssix .toc h4{font-size:.9rem;margin-top:0}.mdl-cssix .toc a{color:#4DD0E1;text-decoration:none;font-size:16px;line-height:28px;display:block}.mdl-cssix .mdl-menu__container{z-index:99}.cssix-content{border-radius:2px;padding:80px 56px;margin-bottom:16px}.is-small-screen .cssix-content{padding:0 8px 16px 12px}.cssix-content a{color:#03a9f4!important}div.instructor{border:2px solid red;border-radius:12px;padding:10px}div.instructor::before{content:"Instructor Notes(The students will not see this content):";display:block;color:red;font-weight:bold}a.instructor-notes-link{color:green!important}div.unpublished{border:2px solid green;border-radius:12px;padding:10px;background-color:#deffd1}div.unpublished::before{content:"This content is not released to students yet";color:red;font-weight:bold}a.unpublished-link{color:red!important}a.next{float:right}.post-content img{width:50%;display:block;margin:auto}.post-content img.large_img{width:80%;display:block;margin:auto}.is-small-screen .mdl-layout__tab-bar-container{display:none}.mdl-layout.is-upgraded .mdl-layout__tab.is-active{color:yellow;font-weight:bold}.mdl-layout__tab.admin_link{background-color:#c71414}.mdl-layout__header .mdl-layout__drawer-button{color:yellow!important}. .mdl-mini-footer{border-top:1px solid #ccc;background-color:inherit!important;padding:8px 16px}footer .lockup{padding-left:15px;padding-top:10px}.lockup-logo,.lockup-text{display:inline-block}.va{vertical-align:middle;line-height:0}.lockup-logo{width:74px;height:24px;background-image:url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png);background-size:74px 24px}.lockup-logo.lockup-dark{background-image:url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_dark_color_74x24dp.png);opacity:.54}@media(max-width:760px){footer .lockup{padding-top:0}}.answer{display:none;border:2px solid green;border-radius:12px;padding:1em}.hide_answer.mdl-button.mdl-js-button{display:none;!important}body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,dl,dd,ol,ul,figure{margin:0;padding:0}body{font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:300;color:#111;background-color:yellow;-webkit-text-size-adjust:100%}h1,h2,h3,h4,h5,h6,p,blockquote,pre,ul,ol,dl,figure,.highlight{margin-bottom:15px}img{max-width:100%;vertical-align:middle;display:block}figure>img{display:block}figcaption{font-size:14px}ul,ol{margin-left:30px}li>ul,li>ol{margin-bottom:0}h1,h2,h3,h4,h5,h6{font-weight:300}a{color:#2a7ae2;text-decoration:none}a:visited{color:#1756a9}a:hover{color:#111;text-decoration:underline}blockquote{color:#828282;border-left:4px solid #e8e8e8;padding-left:15px;font-size:18px;letter-spacing:-1px;font-style:italic}blockquote>:last-child{margin-bottom:0}pre,code{font-size:15px;border:1px solid #e8e8e8;border-radius:3px;background-color:#eef}code{padding:1px 5px}pre{padding:8px 12px;overflow-x:scroll}pre>code{border:0;padding-right:0;padding-left:0}.wrapper{max-width:-webkit-calc(800px -(30px * 2));max-width:calc(800px -(30px * 2));margin-right:auto;margin-left:auto;padding-right:30px;padding-left:30px}@media screen and (max-width:800px){.wrapper{max-width:-webkit-calc(800px -(30px));max-width:calc(800px -(30px));padding-right:15px;padding-left:15px}}.wrapper:after,.footer-col-wrapper:after{content:"";display:table;clear:both}.icon>svg{display:inline-block;width:16px;height:16px;vertical-align:middle}.icon>svg path{fill:#828282}.site-header{border-top:5px solid #424242;border-bottom:1px solid #e8e8e8;min-height:56px;position:relative}.site-title{font-size:26px;line-height:56px;letter-spacing:-1px;margin-bottom:0;float:left}.site-title,.site-title:visited{color:#424242}.sidebar-nav{float:left;border-right:1px solid #e8e8e8}.site-nav{float:right;line-height:56px}.site-nav .menu-icon{display:none}.site-nav .page-link{color:#111;line-height:1.5}.site-nav .page-link:not(:first-child){margin-left:20px}@media screen and (max-width:600px){.site-nav{position:absolute;top:9px;right:30px;background-color:yellow;border:1px solid #e8e8e8;border-radius:5px;text-align:right}.site-nav .menu-icon{display:block;float:right;width:36px;height:26px;line-height:0;padding-top:10px;text-align:center}.site-nav .menu-icon>svg{width:18px;height:15px}.site-nav .menu-icon>svg path{fill:#424242}.site-nav .trigger{clear:both;display:none}.site-nav:hover .trigger{display:block;padding-bottom:5px}.site-nav .page-link{display:block;padding:5px 10px}}.site-footer{border-top:1px solid #e8e8e8;padding:30px 0}.footer-heading{font-size:18px;margin-bottom:15px}.contact-list,.social-media-list{list-style:none;margin-left:0}.footer-col-wrapper{font-size:15px;color:#828282;margin-left:-15px}.footer-col{float:left;margin-bottom:15px;padding-left:15px}.footer-col-1{width:-webkit-calc(35% -(30px / 2));width:calc(35% -(30px / 2))}.footer-col-2{width:-webkit-calc(20% -(30px / 2));width:calc(20% -(30px / 2))}.footer-col-3{width:-webkit-calc(45% -(30px / 2));width:calc(45% -(30px / 2))}@media screen and (max-width:800px){.footer-col-1,.footer-col-2{width:-webkit-calc(50% -(30px / 2));width:calc(50% -(30px / 2))}.footer-col-3{width:-webkit-calc(100% -(30px / 2));width:calc(100% -(30px / 2))}}@media screen and (max-width:600px){.footer-col{float:none;width:-webkit-calc(100% -(30px / 2));width:calc(100% -(30px / 2))}}.page-content{padding:30px 0}.page-heading{font-size:20px}.post-list{margin-left:0;list-style:none;display:block;flex-wrap:wrap;justify-content:flex-start}.post-list>li{flex-basis:50%}.post-meta{font-size:14px;color:#828282}.post-link{display:block;font-size:1em}.post-header,.post-footer{margin-bottom:30px}.cssi-post-title{font-size:42px;letter-spacing:-1px;line-height:1}@media screen and (max-width:800px){.cssi-post-title{font-size:36px}}.cssix-intro h1{font-size:24px;line-height:1}.cssix-intro h2{font-size:16px;line-height:1}.post-content{margin-bottom:30px}.post-content h2{font-size:32px}@media screen and (max-width:800px){.post-content h2{font-size:28px}}.post-content h3{font-size:26px}@media screen and (max-width:800px){.post-content h3{font-size:22px}}.post-content h4{font-size:20px}@media screen and (max-width:800px){.post-content h4{font-size:18px}}.PageNavigation{font-size:14px;display:block;width:auto;overflow:hidden}.PageNavigation a{display:block;width:50%;float:left;margin:1em 0}.PageNavigation .next{text-align:right}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#008080}.highlight .vg{color:#008080}.highlight .vi{color:#008080}.highlight .il{color:#099}</style><link href="http://cssicurriculum.withgoogle.com/javaScript/lecture-guides/01-intro-js.html" rel="canonical"><link href="http://cssicurriculum.withgoogle.com/feed.xml" rel="alternate" title="Google CSSI" type="application/rss+xml"></head><body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-cssix" data-gr-c-s-loaded="true"><div class="mdl-layout__container has-scrolling-header"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button has-drawer has-tabs is-upgraded" data-upgraded=",MaterialLayout"><header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary mdl-color-text--white"><div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div><div class="mdl-layout--large-screen-only mdl-layout__header-row"></div><div class="mdl-layout__header-row"><a href="https://cssicurriculum.withgoogle.com/" id="cssilogo_header"></a></div><div class="mdl-layout--large-screen-only mdl-layout__header-row"></div><div class="mdl-layout__tab-bar-container"><div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-left-button"><i class="material-icons">chevron_left</i></div><div class="mdl-layout--large-screen-only mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark mdl-color-text--white mdl-js-ripple-effect--ignore-events" data-upgraded=",MaterialRipple"><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/intro.html">Intro<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/command-line.html">Command Line<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/html.html">HTML &amp; CSS<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab is-active" href="https://cssicurriculum.withgoogle.com/javascript.html">JavaScript<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/python.html">Python<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/app-engine.html">AppEngine<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/project.html">Project Week<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/git.html">Git<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/resources.html">Resources<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a></div><div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-right-button"><i class="material-icons">chevron_right</i></div></div></header><div class="mdl-layout__drawer" aria-hidden="true"><span class="mdl-layout-title">CSSIx Modules</span><nav class="mdl-navigation"><a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/intro.html">Intro</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/command-line.html">Command Line</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/html.html">HTML &amp; CSS</a> <a class="mdl-navigation__link is-active" href="https://cssicurriculum.withgoogle.com/javascript.html">JavaScript</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/python.html">Python</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/app-engine.html">AppEngine</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/project.html">Project Week</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/git.html">Git</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/resources.html">Resources</a></nav></div><main class="mdl-layout__content cssi-main"><div class="mdl-grid"><div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div><div class="cssix-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col"><div class="post"><header class="post-header"><div><div class="PageNavigation"><a class="prev" href="https://cssicurriculum.withgoogle.com/javaScript/datatypes-frame.html">« Data Types Overview</a> <a class="next" href="https://cssicurriculum.withgoogle.com/javaScript/Dog_Walker-lab.html">Dog Walker Lab »</a></div></div></header><article class="post-content"><h1 id="intro-to-javascript">Intro to JavaScript</h1><h2 id="sequence">Sequence</h2><ol><li><a href="https://cssicurriculum.withgoogle.com/javaScript/lecture-guides/01-intro-js.html#the-JavaScript-console">The JavaScript Console</a></li><li><a href="https://cssicurriculum.withgoogle.com/javaScript/lecture-guides/01-intro-js.html#storing-data">Storing Data</a></li><li><a href="https://cssicurriculum.withgoogle.com/javaScript/lecture-guides/01-intro-js.html#types-of-data">Types of Data</a></li><li><a href="https://cssicurriculum.withgoogle.com/javaScript/lecture-guides/01-intro-js.html#moving-away-from-the-console">Moving Away from the Console</a></li><li><a href="https://cssicurriculum.withgoogle.com/javaScript/lecture-guides/01-intro-js.html#conditional-programming">Conditional Programming</a></li><li><a href="https://cssicurriculum.withgoogle.com/javaScript/lecture-guides/01-intro-js.html#logical-operators">Logical Operators</a></li></ol><h2 id="learning-objectives">Learning objectives</h2><ul><li>Open and interact with the browser’s native JavaScript console.</li><li>Perform mathematical operations <code class="highlighter-rouge">+</code>, <code class="highlighter-rouge">-</code>, <code class="highlighter-rouge">*</code>, and <code class="highlighter-rouge">/</code> in JavaScript.</li><li>Initialize variables and constants using <code class="highlighter-rouge">let</code> and <code class="highlighter-rouge">const</code>.</li><li>Modify variables using the assignment operator <code class="highlighter-rouge">=</code>.</li><li>Predict the outcome of boolean operators <code class="highlighter-rouge">===</code>, <code class="highlighter-rouge">&gt;</code>, <code class="highlighter-rouge">&lt;</code>, <code class="highlighter-rouge">&gt;=</code>, <code class="highlighter-rouge">&lt;=</code>, and <code class="highlighter-rouge">!=</code> between two literal values.</li><li>Use if-else statements as a control flow mechanism.</li><li>Write compound conditional statements using <code class="highlighter-rouge">&amp;&amp;</code> and <code class="highlighter-rouge">||</code> logical operators.</li></ul><h2 id="the-javascript-console">The JavaScript Console</h2><p>JavaScript is the language of the web - it is the only programming language universally supported by web browsers. It is the way that you build interactivity into your website.</p><p>Every browser has a <strong>JavaScript Console</strong> - in the console, you can write quick lines of JavaScript code to test out.</p><p>Let’s start by opening up the JavaScript Console in Google Chrome. Open the console by pressing <code class="highlighter-rouge">CTRL+SHIFT+J</code> (Windows/Chromebook) or <code class="highlighter-rouge">OPTION+CMD+J</code> (Mac), and clicking on the “Console” tab.</p><p>Let’s write our first line of JavaScript! Type in the following and then hit enter:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>You should see <code class="highlighter-rouge">Hello world!</code> echoed back at you (ignore the <code class="highlighter-rouge">undefined</code> that follows). Congratulations - you have written JavaScript!</p><p>Although modern JavaScript will run even without the final semicolon, it is good practice to include it at the end of every statement.</p><h2 id="storing-data">Storing Data</h2><p>We can store data in variables and constants - think of variables and constants as storage boxes with a label that contains some data. The label is the variable or constant name. We can initialize (create) one of these storage boxes in three different ways. Enter these three lines into your console:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="c1">// This is a variable - it stores data and its contents can be changed.</span>
+<span class="kd">let</span> <span class="nx">name1</span> <span class="o">=</span> <span class="s1">'Bill'</span><span class="p">;</span>
+<span class="c1">// This is a constant - it is like a variable, but it cannot be changed.</span>
+<span class="kd">const</span> <span class="nx">name2</span> <span class="o">=</span> <span class="s1">'Bo'</span><span class="p">;</span>
+<span class="c1">// This is an older naming convention for a variable.</span>
+<span class="kd">var</span> <span class="nx">name3</span> <span class="o">=</span> <span class="s1">'Bob'</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>You can then type in the name of a variable or constant into the browser console to see what’s contained in it.</p><p></p><p>Once a variable or constant has been initialized, you don’t need to declare its type (with <code class="highlighter-rouge">var</code>/<code class="highlighter-rouge">let</code>/<code class="highlighter-rouge">const</code>) again. Simply assign it with a new equals sign. Try re-assigning the value for these variables.</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nx">name1</span> <span class="o">=</span> <span class="s1">'Amy'</span><span class="p">;</span>
+<span class="nx">name2</span> <span class="o">=</span> <span class="s1">'Alice'</span><span class="p">;</span>
+<span class="nx">name3</span> <span class="o">=</span> <span class="s1">'Ari'</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Whoops! You’ll probably get an error <code class="highlighter-rouge">Uncaught TypeError: Assignment to constant variable.</code> after trying the second one. This is an important detail - when you declare a variable with <code class="highlighter-rouge">const</code>, you cannot assign a new value to it.</p><p></p><p><code class="highlighter-rouge">let</code> and <code class="highlighter-rouge">var</code> seem to do similar things, but <code class="highlighter-rouge">let</code> belongs to a newer version of JavaScript called ECMAScript 2015, or ES6 for short. <code class="highlighter-rouge">let</code> is encouraged over <code class="highlighter-rouge">var</code> for reasons that we won’t explore at this point in time, so make a habit of using <code class="highlighter-rouge">let</code>. Plus, it rolls off the tongue more fluently: “Let name3 be equal to ‘Ari’.”</p><p>Recap:</p><ul><li><code class="highlighter-rouge">let</code> declares a variable that can be reassigned.</li><li><code class="highlighter-rouge">const</code> declares a variable that cannot be reassigned.</li><li><code class="highlighter-rouge">var</code> is generally discouraged from use in modern JavaScript.</li></ul><h2 id="types-of-data">Types of Data</h2><p>So far we’ve only been dealing with names, in quotes. But that’s just an example of one of several types of data that we can manipulate in JavaScript:</p><ul><li><strong>String</strong>: text, in quotes (e.g. <code class="highlighter-rouge">"Alice"</code>)</li><li><strong>Number</strong>: A number with a decimal point value (e.g. <code class="highlighter-rouge">3.5</code>) usually called a <em>float</em>, or a number without one (e.g. <code class="highlighter-rouge">4</code>), called an <em>integer</em>.</li><li><strong>Boolean</strong> (true or false - those are the only two values)</li></ul><p>NOTE: In many programming languages, including Python, which is covered in the next unit, numbers are more clearly divided into two categories: Floats (values with digits after the decimal point, e.g., 3.75) and Integers (e.g., 42). JavaScript doesn’t draw such a distinction, so you don’t need to worry about this now. It will be covered in more detail in the Python unit.</p><p>For example, let’s declare a variable <code class="highlighter-rouge">age</code> that contains a number equal to your age.</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>This variable, age, contains a number - <code class="highlighter-rouge">30</code>. What if we did the following instead?</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">age2</span> <span class="o">=</span> <span class="s2">"30"</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>The variable <code class="highlighter-rouge">age2</code> contains <code class="highlighter-rouge">"30"</code> as a string (denoted by the quotation marks), instead of as a number. This is important because if we want to do certain things to a number, like mathematical operations, the data needs to be of type number and not of type string. Of these two choices, the variable <code class="highlighter-rouge">age</code>, which stores the information as a number, is probably the more accurate and useful way of storing this type of information.</p><p>One of the great uses of the console is to evaluate bits of code - to type in an expression and see the result, without needing to use <code class="highlighter-rouge">console.log()</code> or variables. Let’s try some math in the console - type in the following:</p><ul><li><code class="highlighter-rouge">4 + 5</code></li><li><code class="highlighter-rouge">2 - 1.5</code></li><li><code class="highlighter-rouge">5 * -3</code></li><li><code class="highlighter-rouge">7 / 3</code></li></ul><p>The results are what you would expect as if you typed these into a calculator. What if we try these with strings instead?</p><ul><li><code class="highlighter-rouge">4 + '5'</code></li><li><code class="highlighter-rouge">2 - '1.5'</code></li><li><code class="highlighter-rouge">5 * '-3'</code></li><li><code class="highlighter-rouge">7 / '3'</code></li></ul><p>You’ll notice that you get similar results - with a some really important exceptions.</p><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>'45'
+0.5
+-15
+2.333333333333335
+</pre></td></tr></tbody></table></code></pre></div></div><p>When you combine a string with an integer using mathematical operators, you’ll notice that:</p><ul><li>for addition, the result is a string (and it combines them by <strong>concatenating</strong>, or joining them together).</li><li>for subtraction, multiplication, and division, it treats the string like it’s a number.</li></ul><p>But what if we tried to multiply by a word? Try entering the following: <code class="highlighter-rouge">5 * "hi"</code></p><p>You’ll see that the result is <code class="highlighter-rouge">NaN</code> - this is a term that stands for Not A Number.</p><p>Realistically, since the outcome can be hard to predict, you should generally avoid using mathematical operators between two different datatypes unless you’ve tested the code, and you are confident that the result you want is the result that will actually be produced.</p><p>Now consider the third data type we listed above: booleans. A boolean is a value that can only be expressed as <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>. Think of booleans as making a statement - a statement can be true or false - such as “It is raining today” or “I am under 18 years old”.</p><p>Usually in the beginning, we’ll be using booleans as a way to compare two values. We would use any number of boolean comparators:</p><ul><li><code class="highlighter-rouge">a === b</code> checks if <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> are equivalent</li><li>‘a != b’ checks if <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> are not equivalent</li><li><code class="highlighter-rouge">a &gt; b</code>, <code class="highlighter-rouge">a &gt;= b</code> checks to see if <code class="highlighter-rouge">a</code> is greater-than/greater-or-equal-to <code class="highlighter-rouge">b</code> respectively</li><li><code class="highlighter-rouge">a &lt; b</code>, <code class="highlighter-rouge">a &lt;= b</code> checks to see if <code class="highlighter-rouge">a</code> is less-than/less-or-equal-to <code class="highlighter-rouge">b</code> respectively</li></ul><p>Try entering some boolean expressions (expressions that give <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>) in the console. Here are some examples to get you started:</p><ul><li><code class="highlighter-rouge">'Bob' === 'Bob'</code></li><li><code class="highlighter-rouge">'hello' === 'HELLO'</code></li><li><code class="highlighter-rouge">5 &lt; 10</code></li><li><code class="highlighter-rouge">3 &lt;= 3.0</code></li></ul><p></p><h3 id="other-data-types">Other data types</h3><p>We’ve touched on the three most critical data types you might need to write some basic scripts, but there are several more that you might see. Click to learn more.</p><div class="answer_container"><div class="answer"><div></div>Two other common types in JavaScript are:<p></p><ul><li>undefined (this happens most often if you declare a variable without assigning a value to it, e.g., <code class="highlighter-rouge">let name;</code>)</li><li>null (this is equivalent to “nothing”; null can be explicitly coded as such, e.g., <code class="highlighter-rouge">let name = null</code>)</li></ul><p>There are also two main JavaScript data structures used to organize multiple pieces of data in relationship to one another:</p><ul><li>Arrays</li><li>Objects</li></ul><p>Each of these will be touched on later in some additional detail, but if one of them shows up in an error message, you should feel free to look it up and learn more.</p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><h3 id="a-quick-note-on-variable-assignment">A Quick Note on Variable Assignment</h3><p>Variable assignment works by performing a two step process:</p><ol><li>Evaluate everything to the right of the equal sign (which follows standard <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">order of operations</a>).</li><li>Save the resulting value into the variable on the left of the equal sign.</li></ol><p>This allows us to do stuff like:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>That second line, <code class="highlighter-rouge">x = x + 5</code>, is saying:</p><ol><li>Take the current value of <code class="highlighter-rouge">x</code> (which is <code class="highlighter-rouge">1</code>) and add <code class="highlighter-rouge">5</code> to it</li><li>Save the resulting value (<code class="highlighter-rouge">6</code>) back into <code class="highlighter-rouge">x</code>.</li></ol><p>So at the end of the second line, <code class="highlighter-rouge">x</code> is 6.</p><p></p><h2 id="moving-away-from-the-console">Moving Away from the Console</h2><p></p><p>To take full advantage of booleans, we’ll want to move away from the console and into a dedicated JavaScript file.</p><p>To start, navigate to a directory where you already have an HTML file up and running. Let’s create a file called <code class="highlighter-rouge">script.js</code> using the following command:</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">touch </span>script.js
+</pre></td></tr></tbody></table></code></pre></div></div><p>HTML files can “attach” a JavaScript file by using the <code class="highlighter-rouge">&lt;script&gt;</code> tag with a source (<code class="highlighter-rouge">src</code>) attribute. To link our newly created <code class="highlighter-rouge">script.js</code> file to our HTML file, we would use the following HTML element:</p><div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"script.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>You can load this element in a number of different places, but generally the best place for it is at the end of the body tag, immediately before the body tag closes (often your third-to-last line of code, before <code class="highlighter-rouge">&lt;/body&gt;</code> and <code class="highlighter-rouge">&lt;/html&gt;</code>).</p><p>Now let’s edit our <code class="highlighter-rouge">script.js</code> file to make our first JavaScript program.</p><p>When you’re a beginner, you’ll want to add this one line to every JavaScript program you write:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"script running!"</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>To see if the script is indeed running as intended, all we need to do is open up the HTML page in a browser, then go directly to the console - the program should have already run and logged this statement to the console! If it hasn’t, check to make sure it has been linked correctly.</p><p>Now let’s revise our program for a more involved test:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">'Charlie'</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Hello '</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s1">'!'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'You are '</span> <span class="o">+</span> <span class="nx">age</span> <span class="o">+</span> <span class="s1">' years old!'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Now go back to the browser, refresh the page, and check to see if your program ran as expected.</p><p></p><h2 id="conditional-programming">Conditional Programming</h2><p></p><p>Let’s write a program together that checks for someone’s age (stored in a variable) and checks to see if they’re 16 or over so they can get their driver’s permit.</p><p>To start, let’s create a variable called <code class="highlighter-rouge">age</code> and give it a number value of <code class="highlighter-rouge">12</code>. Make sure not to use quotes, or else it will be a String, which isn’t what we want.</p><p>Now, we need have our program do two different things, depending on a condition. To do this, we will need to write an <code class="highlighter-rouge">if</code>/<code class="highlighter-rouge">else</code> statement. This is where booleans come into play. An <code class="highlighter-rouge">if</code>/<code class="highlighter-rouge">else</code> statement, or conditional statement, looks like the following:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// this code will execute if the condition is true</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// this code will execute if the condition is false</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>A few things to note:</p><ul><li><code class="highlighter-rouge">//</code> in JavaScript denotes the start of a comment; anything on the same line after the <code class="highlighter-rouge">//</code> will not be executed as code - it’s a note to yourself and to other developers.</li><li><code class="highlighter-rouge">if</code> and <code class="highlighter-rouge">else</code> are followed by opening and closing curly braces <code class="highlighter-rouge">{}</code> - this is to indicate what lines of code are “inside” the <code class="highlighter-rouge">if</code> statement, what lines of code are “inside” the <code class="highlighter-rouge">else</code> statement, and what lines of code are not inside either.</li><li>In place of <code class="highlighter-rouge">condition</code>, we want to write a conditional statement (a boolean expression) to check whether <code class="highlighter-rouge">age</code> is greater than or equal to <code class="highlighter-rouge">16</code>.</li></ul><p></p><p>So our code then becomes:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">age</span> <span class="o">&gt;=</span> <span class="mi">16</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// this code will execute if age is &gt;= 16 (i.e., if the condition is true)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// this code will execute if age is &lt; 16 (i.e., if the condition is false)</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Then we can insert our code in place of the comments (we just want to console.log a relevant statement).</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">age</span> <span class="o">&gt;=</span> <span class="mi">16</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'You can get your driver</span><span class="se">\'</span><span class="s1">s permit!'</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'You will have to wait to get your permit'</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>NOTE: The <code class="highlighter-rouge">\'</code> is called escaping a character - we use a backslash to indicate the at the single quote is meant to be printed as the character, and it is not to be interpreted as closing the string. Click below for more thoughts on strings and escaping characters:</p><p></p><div class="answer_container"><div class="answer"><div></div>Another way to make sure an apostrophe gets printed is to use double quotes to indicate the start and end of your string.<p></p><p>Double and single quotes can be used interchangeably in JavaScript, and this guide has show examples of each kind, but whatever your preferred convention, be sure to use it consistently. And if your company, school, professor, or code reviewer has a style guide that specifies one type should be used, follow that style guide.</p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>What if the condition was more complicated? What if we wanted to check to see if the user was able to get their driver’s permit, and also whether they are able to vote? There are three categories:</p><ul><li>If the person is 18+, they can get their permit and vote</li><li>If the person is 16-18, they can get their permit only</li><li>If the person is &lt;16, they can do neither</li></ul><p>We can add additional conditions to a conditional statement by using <code class="highlighter-rouge">else if</code>. This would go after the initial <code class="highlighter-rouge">if</code> statement, but before any <code class="highlighter-rouge">else</code> statements:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'You can vote and get your driver</span><span class="se">\'</span><span class="s1">s permit!'</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">age</span> <span class="o">&lt;</span> <span class="mi">16</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'You will have to wait to get your permit.'</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">age</span> <span class="o">===</span> <span class="mi">16</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'You</span><span class="se">\'</span><span class="s1">re EXACTLY old enough to get your permit!'</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'You can get your driver</span><span class="se">\'</span><span class="s1">s permit, but you can</span><span class="se">\'</span><span class="s1">t vote yet.'</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p><p>You can have as many <code class="highlighter-rouge">else if</code> statements as you need following an initial <code class="highlighter-rouge">if</code> statement.</p><p>Notice that the conditional that checks to see if someone’s age <em>is</em> 16 is written with <em>three</em> equals signs. Remember that a single equals sign is the <strong>assignment</strong> and <strong>reassignment</strong> operator - it declares that something IS true. The boolean expressions to <em>check</em> if something is true use either two (<code class="highlighter-rouge">==</code>) or three (<code class="highlighter-rouge">===</code>) equals signs.</p><h6 id="mini-challenges">Mini-challenges</h6><ul><li>Code out another variable that stores a username as a string.</li><li>Write code that logs a personalized greeting to the console for at least three different celebrities (e.g., if the user’s name is Ada Lovelace, you might output “Welcome, first programmer in history”).</li><li>Bonus 1: Find a way to greet each person with a formal greeting (e.g., if Oprah Winfrey logs in, say “greetings Ms. Winfrey”). You may want to include new variables for last name and preferred pronoun to make this happen.</li><li>Bonus 2: Include at least two people with the same first name (e.g., Chris Pine and Chris Hemsworth), and figure out what you think the best way is to make sure that each Chris gets the correct greeting.</li></ul><p></p><h2 id="logical-operators---and-"><a id="logical-operators"></a>Logical Operators <code class="highlighter-rouge">&amp;&amp;</code>, <code class="highlighter-rouge">||</code>, and <code class="highlighter-rouge">!</code></h2><p>There are a few different ways you can check multiple conditions at once, and one of the most sophisticated methods uses <em>logical operators</em></p><p>If you want your statements to be executed only when two or more conditions are <strong>all</strong> true, use the <code class="highlighter-rouge">&amp;&amp;</code> (and) operator:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">age</span> <span class="o">&lt;</span> <span class="mi">18</span> <span class="o">&amp;&amp;</span> <span class="nx">name</span> <span class="o">===</span> <span class="s2">"John"</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>If you want your code to execute if <strong>at least</strong> one condition is true, use the <code class="highlighter-rouge">||</code> (or) operator:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">age</span> <span class="o">&lt;</span> <span class="mi">18</span> <span class="o">||</span> <span class="nx">age</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Finally, you can use the <code class="highlighter-rouge">!</code> (not) operator to reverse the result of a condition:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">raining</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">raining</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Today is a sunny day'</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p><p>You can combine these operators in any way you want. For example:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">day_of_the_week</span> <span class="o">===</span> <span class="s1">'Sunday'</span> <span class="o">||</span> <span class="nx">day_of_the_week</span> <span class="o">===</span> <span class="s1">'Saturday'</span><span class="p">))</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Time to go to work and hit the game room!'</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Note that you can often write conditions in more than one way. For example, the previous snippet can also be written as:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">day_of_the_week</span> <span class="o">!=</span> <span class="s1">'Sunday'</span> <span class="o">&amp;&amp;</span> <span class="nx">day_of_the_week</span> <span class="o">!=</span> <span class="s1">'Saturday'</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Time to go to work and hit the game room!'</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>When using the <code class="highlighter-rouge">&amp;&amp;</code> or <code class="highlighter-rouge">||</code> operators, make sure that you are using them between full boolean expressions (values that are <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>). For example, you cannot write:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="c1">// This code will NOT work in the way you want it to</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">animal</span> <span class="o">===</span> <span class="p">(</span><span class="s1">'dog'</span> <span class="o">||</span> <span class="s1">'cat'</span> <span class="o">||</span> <span class="s1">'cow'</span><span class="p">))</span> <span class="p">{</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>JavaScript will accept this statement but will not behave as you would likely expect. It will execute the instructions inside the if statement only if <code class="highlighter-rouge">animal</code> is equal to <code class="highlighter-rouge">'dog'</code> (for reasons that we will not explore now). Instead, you will write:</p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">if</span> <span class="p">(</span><span class="nx">animal</span> <span class="o">===</span> <span class="s1">'dog'</span> <span class="o">||</span> <span class="nx">animal</span> <span class="o">===</span> <span class="s1">'cat'</span> <span class="o">||</span> <span class="nx">animal</span> <span class="o">===</span> <span class="s1">'cow'</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>which will execute the function if <code class="highlighter-rouge">animal</code> has any of the values checked in the condition.</p><h6 id="mini-challenges-1">Mini-challenges</h6><ul><li>Go back to your celebrity greeter and use some <code class="highlighter-rouge">||</code> operators to give multiple celebrities the same greeting (for example, you might greet Beyonce and Solange Knowles the same way).</li><li>Add a password variable to the greeter, and only greet each user if the password AND (<code class="highlighter-rouge">&amp;&amp;</code>) the username match.</li></ul></article><footer class="post-footer"><hr><div class="PageNavigation"><a class="prev" href="https://cssicurriculum.withgoogle.com/javaScript/datatypes-frame.html">« Data Types Overview</a> <a class="next" href="https://cssicurriculum.withgoogle.com/javaScript/Dog_Walker-lab.html">Dog Walker Lab »</a></div></footer></div></div></div></main><footer class="mdl-mini-footer section"><div class="mdl-mini-footer__left-section"><div class="lockup va"><span class="lockup-logo lockup-dark"></span></div></div><div class="mdl-mini-footer__right-section"><ul class="mdl-mini-footer__link-list"><li><span id="site_label">CSSI - Atlanta</span></li><li>--</li><li><a href="https://www.google.com/intl/en/about/">About Google</a></li><li><a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a></li><li><a href="https://www.google.com/intl/en/policies/terms/">Terms</a></li><li><a href="https://cssicurriculum.withgoogle.com/javaScript/lecture-guides/01-intro-js.html#" id="signout_link">Logout</a></li><li><a href="https://cssicurriculum.withgoogle.com/javaScript/lecture-guides/01-intro-js.html#" id="forgetme_link">Forget Me</a></li></ul></div><script src="./Intro to JavaScript_files/firebase-app.js.download"></script><script src="./Intro to JavaScript_files/firebase-auth.js.download"></script><script src="./Intro to JavaScript_files/firebaseui.js.download"></script><link href="./Intro to JavaScript_files/firebaseui.css" rel="stylesheet" type="text/css"><script>
+  function getCookie(name) {
+    let dc = document.cookie;
+    let prefix = name + "=";
+    let begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+      begin = dc.indexOf(prefix);
+      if (begin != 0) return null;
+    }
+    begin += 2;
+    let end = document.cookie.indexOf(";", begin);
+    if (end == -1) {
+      end = dc.length;
+    }
+    return decodeURI(dc.substring(begin + prefix.length, end));
+  }
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD_NpvZGlms1zebBgfE4RZPCim5irYGbG4",
+    authDomain: "cssi-curriculum.firebaseapp.com",
+    databaseURL: "https://cssi-curriculum.firebaseio.com",
+    projectId: "cssi-curriculum",
+    storageBucket: "cssi-curriculum.appspot.com",
+    messagingSenderId: "443846997353"
+  };
+  // Firebase log-in widget
+  function configureFirebaseLoginWidget() {
+    let uiConfig = {
+      signInSuccessUrl: '/',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        {
+            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            // Whether the display name should be displayed in the Sign Up page.
+            requireDisplayName: false,
+        },
+      ],
+      callbacks: {
+        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+          let user = authResult.user;
+          let credential = authResult.credential;
+          let isNewUser = authResult.additionalUserInfo.isNewUser;
+          let providerId = authResult.additionalUserInfo.providerId;
+          let operationType = authResult.operationType;
+          // Do something with the returned AuthResult.
+          // Return type determines whether we continue the redirect automatically
+          // or whether we leave that to developer to handle.
+          return true;
+        },
+        signInFailure: function(error) {
+          // Some unrecoverable error occurred during sign-in.
+          // Return a promise when error handling is completed and FirebaseUI
+          // will reset, clearing any UI. This commonly occurs for error code
+          // 'firebaseui/anonymous-upgrade-merge-conflict' when merge conflict
+          // occurs. Check below for more details on this.
+          return handleUIError(error);
+        },
+      },
+      // Terms of service url
+      'tosUrl': 'https://www.google.com/intl/en/policies/terms/',
+    };
+
+    let user = firebase.auth().currentUser;
+    if (!user && document.getElementById('firebaseui-auth-container')) {
+      let ui = new firebaseui.auth.AuthUI(firebase.auth());
+      ui.start('#firebaseui-auth-container', uiConfig);
+    }
+  }
+
+  function updateUserToken(user) {
+    let oldCookie = getCookie('idToken');
+    if (user) {
+      let refresh_token = getCookie('needRefreshToken');
+      user.getIdToken(refresh_token == 'true').then(function(idToken) {
+        document.cookie = "idToken=" + idToken + "; path=/";
+        if (!oldCookie) {
+          location.reload();
+        }
+      });
+    } else {
+      console.log("Removing auth token");
+      document.cookie = "idToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+      if (oldCookie) {
+        location.reload();
+      }
+    }
+  }
+
+  function configureFirebaseLogin() {
+    firebase.initializeApp(config);
+    firebase.auth().onAuthStateChanged(updateUserToken);
+    firebase.auth().onIdTokenChanged(function() {console.log("token changed");});
+  }
+
+  function signOut() {
+    firebase.auth().signOut();
+    window.location = "/";
+    return false;
+  }
+
+  function forgetMe() {
+    let user = firebase.auth().currentUser;
+    user.delete().then(function() {
+      console.log("User deleted");
+    }).catch(function(error) {
+      console.log("Error deleting the user " + error);
+    });
+    firebase.auth().signOut();
+    window.location = "/";
+    return false;
+  }
+
+  function sendVerificationEmail() {
+    let user = firebase.auth().currentUser;
+    if (user && !user.emailVerified) {
+      user.sendEmailVerification().then(function() {
+          console.log("Verification email sent.");
+        }).catch(function(error) {
+          console.log("An error happened while sending the verification email.");
+        });
+    } else if (user) {
+      console.log("Email already verified");
+    } else {
+      console.log("User not logged in");
+    }
+    console.log("Removing auth token");
+    document.cookie = "idToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.querySelector('#send_verification_button').style.display = 'None';
+    document.querySelector('#verification_sent').style.display = 'block';
+  }
+
+  function checkAndRestoreCookie(){
+    let user = firebase.auth().currentUser;
+  }
+
+  function showAnswer(event) {
+    let show_answer_button = event.currentTarget;
+    let answer_container = show_answer_button.parentElement;
+    toggleAnswer(answer_container, true);
+  }
+
+  function hideAnswer(event) {
+    let show_answer_button = event.currentTarget;
+    let answer_container = show_answer_button.parentElement;
+    toggleAnswer(answer_container, false);
+  }
+
+  function toggleAnswer(container, visible) {
+    let answer = container.querySelector('.answer');
+    answer.style.display = visible ? 'block' : 'none';
+    let hide_answer_button = container.querySelector('.hide_answer');
+    hide_answer_button.style.display = visible ? 'block' : 'none';
+    let show_answer_button = container.querySelector('.show_answer');
+    show_answer_button.style.display = visible ? 'none' : 'block';
+  }
+
+  function toggleStudentViewCookie(event) {
+    const new_value = event.target.checked;
+    document.cookie = "student_view=" + new_value + ";path=/";
+    location.reload();
+  }
+
+  window.addEventListener('load', function() {
+    configureFirebaseLogin();
+    configureFirebaseLoginWidget();
+    //checkAndRestoreCookie();
+    let signout_link = document.querySelector('#signout_link');
+    if (signout_link) {
+      signout_link.onclick = signOut;
+    }
+    let forgetme_link = document.querySelector('#forgetme_link');
+    if (forgetme_link) {
+      forgetme_link.onclick = forgetMe;
+    }
+    let email_verification_btn = document.querySelector('#send_verification_button');
+    if (email_verification_btn) {
+      email_verification_btn.onclick = sendVerificationEmail;
+    }
+    let show_answer_btns = document.querySelectorAll('.show_answer');
+    show_answer_btns.forEach( function(element) {
+      element.onclick = showAnswer;
+    });
+    let hide_answer_btns = document.querySelectorAll('.hide_answer');
+    hide_answer_btns.forEach( function(element) {
+      element.onclick = hideAnswer;
+    });
+    // Student View checkbox not available on all pages, if present,
+    // it can be used to override the user role, so that instructors can view
+    // content as students.
+    let student_view_flag = document.querySelector('#chk_student_view');
+    if (student_view_flag) {
+      student_view_flag.checked = JSON.parse(getCookie('student_view'));
+      student_view_flag.onclick = toggleStudentViewCookie;
+    }
+    // Select the proper element in the site selection view based on the
+    // existing cookies.
+    let selected_site = getCookie('site');
+    let site_selector_list = document.querySelectorAll('.site_radio');
+    [].forEach.call(site_selector_list, (element) => {
+      element.addEventListener('click', () => {
+        console.log('Clicked ' + element.value);
+        document.cookie = "site=" + element.value + ";path=/";
+        document.querySelector('#site_label').innerText = element.dataset.label;
+      });
+    });
+    if (selected_site && site_selector_list.length > 0) {
+      [].forEach.call(site_selector_list, (element) => {
+        console.log(selected_site);
+        if (element.value === selected_site) {
+          element.checked = true;
+        } else {
+          element.checked = false;
+        }
+      });
+      console.log(site_selector_list);
+    }
+
+  })
+</script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101261509-1', 'auto');
+  ga('send', 'pageview');
+</script></footer><div class="mdl-layout__obfuscator"></div></div></div></body></html>

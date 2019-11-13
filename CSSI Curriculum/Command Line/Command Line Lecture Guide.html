@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://cssicurriculum.withgoogle.com/command-line/command-line.html -->
+<html class="gr__cssicurriculum_withgoogle_com mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width, initial-scale=1" name="viewport"><title>Command Line Lecture Guide</title><meta content="
+          
+              Command Line Lecture Guide
+          " name="description"><link href="https://cssicurriculum.withgoogle.com/favicon.ico" rel="shortcut icon"><link href="./Command Line Lecture Guide_files/material.indigo-yellow.min.css" rel="stylesheet"><link href="./Command Line Lecture Guide_files/icon" rel="stylesheet"><script async="" src="./Command Line Lecture Guide_files/analytics.js.download"></script><script defer="" src="./Command Line Lecture Guide_files/material.min.js.download"></script><style>html,body{font-family:'Roboto','Helvetica',sans-serif;margin:0;padding:0}#verification_sent{display:None}.cssix-intro.mdl-card{width:99%;margin-bottom:2em}.cssix-intro.mdl-card>.mdl-card__supporting_text{padding:1em}.mdl-layout__header-row h3 a{color:white;text-decoration:none}#cssilogo_header{content:url('/cssilogo.png');width:80%}.admin_nav_link{color:red}.mdl-cssix .mdl-layout__header-row{padding-left:40px}.mdl-cssix .mdl-layout.is-small-screen .mdl-layout__header-row h3{font-size:inherit;padding-left:12px}.mdl-cssix .mdl-layout__tab-bar-button{display:none}.mdl-cssix .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button{display:none}.mdl-cssix .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,.mdl-cssix .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container{overflow:visible}.cssi-main{overflow-x:visible!important;overflow-y:visible!important;overflow:visible!important}.mdl-cssix .mdl-layout__tab-bar-container{height:64px}.mdl-cssix .mdl-layout__tab-bar{padding:0;padding-left:16px;box-sizing:border-box;height:100%;width:100%}.mdl-cssix .mdl-layout__tab-bar .mdl-layout__tab{height:64px;line-height:64px;color:white}.mdl-cssix .mdl-layout__tab-bar .mdl-layout__tab.is-active::after{height:4px}.mdl-cssix main>.mdl-layout__tab-panel{padding:8px;padding-top:48px}.mdl-layout__tab#header_logout{background-color:red}.mdl-cssix .mdl-card{height:auto;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.mdl-cssix .mdl-card>*{height:auto}.mdl-cssix .mdl-card .mdl-card__supporting-text{margin:40px;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;padding:0;color:inherit;width:calc(100% - 80px)}.mdl-cssix .mdl-card__supporting-text h4{margin-top:0;margin-bottom:20px}.mdl-cssix .mdl-card__actions{margin:0;padding:4px 40px;color:inherit}.mdl-cssix .mdl-card__actions a{color:#00BCD4;margin:0}.mdl-cssix .mdl-card__actions a:hover,.mdl-cssix .mdl-card__actions a:active{color:inherit;background-color:transparent}.mdl-cssix .mdl-card__supporting-text+.mdl-card__actions{border-top:1px solid rgba(0,0,0,0.12)}.mdl-cssix #add{position:absolute;right:40px;top:36px;z-index:999}.mdl-list__item{min-height:.4em;padding:.3em}.material-icons.md-18{font-size:18px}.material-icons.md-24{font-size:24px}.material-icons.md-36{font-size:36px}.material-icons.md-48{font-size:48px}.post-list .toc_icon{vertical-align:middle;margin:.1em 1em}.mdl-cssix .mdl-layout__content section:not(:last-of-type){position:relative;margin-bottom:48px}.mdl-cssix section.section--center{max-width:860px}.mdl-cssix #features section.section--center{max-width:620px}.mdl-cssix section>header{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.mdl-cssix section>.section__play-btn{min-height:200px}.mdl-cssix section>header>.material-icons{font-size:3rem}.mdl-cssix section>button{position:absolute;z-index:99;top:8px;right:8px}.mdl-cssix section .section__circle{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:1;-ms-flex-negative:1;flex-shrink:1}.mdl-cssix section .section__text{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;padding-top:8px}.mdl-cssix section .section__text h5{font-size:inherit;margin:0;margin-bottom:.5em}.mdl-cssix section .section__text a{text-decoration:none}.mdl-cssix section .section__circle-container>.section__circle-container__circle{width:64px;height:64px;border-radius:32px;margin:8px 0}.mdl-cssix section.section--footer .section__circle--big{width:100px;height:100px;border-radius:50px;margin:8px 32px}.mdl-cssix .is-small-screen section.section--footer .section__circle--big{width:50px;height:50px;border-radius:25px;margin:8px 16px}.mdl-cssix section.section--footer{padding:64px 0;margin:0 -8px -8px -8px}.mdl-cssix section.section--center .section__text:not(:last-child){border-bottom:1px solid rgba(0,0,0,.13)}.mdl-cssix .mdl-card .mdl-card__supporting-text>h3:first-child{margin-bottom:24px}.mdl-cssix .mdl-layout__tab-panel:not(#overview){background-color:white}.mdl-cssix #features section{margin-bottom:72px}.mdl-cssix #features h4,#features h5{margin-bottom:16px}.mdl-cssix .toc{border-left:4px solid #C1EEF4;margin:24px;padding:0;padding-left:8px;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.mdl-cssix .toc h4{font-size:.9rem;margin-top:0}.mdl-cssix .toc a{color:#4DD0E1;text-decoration:none;font-size:16px;line-height:28px;display:block}.mdl-cssix .mdl-menu__container{z-index:99}.cssix-content{border-radius:2px;padding:80px 56px;margin-bottom:16px}.is-small-screen .cssix-content{padding:0 8px 16px 12px}.cssix-content a{color:#03a9f4!important}div.instructor{border:2px solid red;border-radius:12px;padding:10px}div.instructor::before{content:"Instructor Notes(The students will not see this content):";display:block;color:red;font-weight:bold}a.instructor-notes-link{color:green!important}div.unpublished{border:2px solid green;border-radius:12px;padding:10px;background-color:#deffd1}div.unpublished::before{content:"This content is not released to students yet";color:red;font-weight:bold}a.unpublished-link{color:red!important}a.next{float:right}.post-content img{width:50%;display:block;margin:auto}.post-content img.large_img{width:80%;display:block;margin:auto}.is-small-screen .mdl-layout__tab-bar-container{display:none}.mdl-layout.is-upgraded .mdl-layout__tab.is-active{color:yellow;font-weight:bold}.mdl-layout__tab.admin_link{background-color:#c71414}.mdl-layout__header .mdl-layout__drawer-button{color:yellow!important}. .mdl-mini-footer{border-top:1px solid #ccc;background-color:inherit!important;padding:8px 16px}footer .lockup{padding-left:15px;padding-top:10px}.lockup-logo,.lockup-text{display:inline-block}.va{vertical-align:middle;line-height:0}.lockup-logo{width:74px;height:24px;background-image:url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png);background-size:74px 24px}.lockup-logo.lockup-dark{background-image:url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_dark_color_74x24dp.png);opacity:.54}@media(max-width:760px){footer .lockup{padding-top:0}}.answer{display:none;border:2px solid green;border-radius:12px;padding:1em}.hide_answer.mdl-button.mdl-js-button{display:none;!important}body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,dl,dd,ol,ul,figure{margin:0;padding:0}body{font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:300;color:#111;background-color:yellow;-webkit-text-size-adjust:100%}h1,h2,h3,h4,h5,h6,p,blockquote,pre,ul,ol,dl,figure,.highlight{margin-bottom:15px}img{max-width:100%;vertical-align:middle;display:block}figure>img{display:block}figcaption{font-size:14px}ul,ol{margin-left:30px}li>ul,li>ol{margin-bottom:0}h1,h2,h3,h4,h5,h6{font-weight:300}a{color:#2a7ae2;text-decoration:none}a:visited{color:#1756a9}a:hover{color:#111;text-decoration:underline}blockquote{color:#828282;border-left:4px solid #e8e8e8;padding-left:15px;font-size:18px;letter-spacing:-1px;font-style:italic}blockquote>:last-child{margin-bottom:0}pre,code{font-size:15px;border:1px solid #e8e8e8;border-radius:3px;background-color:#eef}code{padding:1px 5px}pre{padding:8px 12px;overflow-x:scroll}pre>code{border:0;padding-right:0;padding-left:0}.wrapper{max-width:-webkit-calc(800px -(30px * 2));max-width:calc(800px -(30px * 2));margin-right:auto;margin-left:auto;padding-right:30px;padding-left:30px}@media screen and (max-width:800px){.wrapper{max-width:-webkit-calc(800px -(30px));max-width:calc(800px -(30px));padding-right:15px;padding-left:15px}}.wrapper:after,.footer-col-wrapper:after{content:"";display:table;clear:both}.icon>svg{display:inline-block;width:16px;height:16px;vertical-align:middle}.icon>svg path{fill:#828282}.site-header{border-top:5px solid #424242;border-bottom:1px solid #e8e8e8;min-height:56px;position:relative}.site-title{font-size:26px;line-height:56px;letter-spacing:-1px;margin-bottom:0;float:left}.site-title,.site-title:visited{color:#424242}.sidebar-nav{float:left;border-right:1px solid #e8e8e8}.site-nav{float:right;line-height:56px}.site-nav .menu-icon{display:none}.site-nav .page-link{color:#111;line-height:1.5}.site-nav .page-link:not(:first-child){margin-left:20px}@media screen and (max-width:600px){.site-nav{position:absolute;top:9px;right:30px;background-color:yellow;border:1px solid #e8e8e8;border-radius:5px;text-align:right}.site-nav .menu-icon{display:block;float:right;width:36px;height:26px;line-height:0;padding-top:10px;text-align:center}.site-nav .menu-icon>svg{width:18px;height:15px}.site-nav .menu-icon>svg path{fill:#424242}.site-nav .trigger{clear:both;display:none}.site-nav:hover .trigger{display:block;padding-bottom:5px}.site-nav .page-link{display:block;padding:5px 10px}}.site-footer{border-top:1px solid #e8e8e8;padding:30px 0}.footer-heading{font-size:18px;margin-bottom:15px}.contact-list,.social-media-list{list-style:none;margin-left:0}.footer-col-wrapper{font-size:15px;color:#828282;margin-left:-15px}.footer-col{float:left;margin-bottom:15px;padding-left:15px}.footer-col-1{width:-webkit-calc(35% -(30px / 2));width:calc(35% -(30px / 2))}.footer-col-2{width:-webkit-calc(20% -(30px / 2));width:calc(20% -(30px / 2))}.footer-col-3{width:-webkit-calc(45% -(30px / 2));width:calc(45% -(30px / 2))}@media screen and (max-width:800px){.footer-col-1,.footer-col-2{width:-webkit-calc(50% -(30px / 2));width:calc(50% -(30px / 2))}.footer-col-3{width:-webkit-calc(100% -(30px / 2));width:calc(100% -(30px / 2))}}@media screen and (max-width:600px){.footer-col{float:none;width:-webkit-calc(100% -(30px / 2));width:calc(100% -(30px / 2))}}.page-content{padding:30px 0}.page-heading{font-size:20px}.post-list{margin-left:0;list-style:none;display:block;flex-wrap:wrap;justify-content:flex-start}.post-list>li{flex-basis:50%}.post-meta{font-size:14px;color:#828282}.post-link{display:block;font-size:1em}.post-header,.post-footer{margin-bottom:30px}.cssi-post-title{font-size:42px;letter-spacing:-1px;line-height:1}@media screen and (max-width:800px){.cssi-post-title{font-size:36px}}.cssix-intro h1{font-size:24px;line-height:1}.cssix-intro h2{font-size:16px;line-height:1}.post-content{margin-bottom:30px}.post-content h2{font-size:32px}@media screen and (max-width:800px){.post-content h2{font-size:28px}}.post-content h3{font-size:26px}@media screen and (max-width:800px){.post-content h3{font-size:22px}}.post-content h4{font-size:20px}@media screen and (max-width:800px){.post-content h4{font-size:18px}}.PageNavigation{font-size:14px;display:block;width:auto;overflow:hidden}.PageNavigation a{display:block;width:50%;float:left;margin:1em 0}.PageNavigation .next{text-align:right}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#008080}.highlight .vg{color:#008080}.highlight .vi{color:#008080}.highlight .il{color:#099}</style><link href="http://cssicurriculum.withgoogle.com/command-line/command-line.html" rel="canonical"><link href="http://cssicurriculum.withgoogle.com/feed.xml" rel="alternate" title="Google CSSI" type="application/rss+xml"></head><body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-cssix" data-gr-c-s-loaded="true"><div class="mdl-layout__container has-scrolling-header"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button has-drawer has-tabs is-upgraded" data-upgraded=",MaterialLayout"><header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary mdl-color-text--white"><div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div><div class="mdl-layout--large-screen-only mdl-layout__header-row"></div><div class="mdl-layout__header-row"><a href="https://cssicurriculum.withgoogle.com/" id="cssilogo_header"></a></div><div class="mdl-layout--large-screen-only mdl-layout__header-row"></div><div class="mdl-layout__tab-bar-container"><div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-left-button"><i class="material-icons">chevron_left</i></div><div class="mdl-layout--large-screen-only mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark mdl-color-text--white mdl-js-ripple-effect--ignore-events" data-upgraded=",MaterialRipple"><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/intro.html">Intro<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab is-active" href="https://cssicurriculum.withgoogle.com/command-line.html">Command Line<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/html.html">HTML &amp; CSS<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/javascript.html">JavaScript<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/python.html">Python<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/app-engine.html">AppEngine<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/project.html">Project Week<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/git.html">Git<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/resources.html">Resources<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a></div><div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-right-button"><i class="material-icons">chevron_right</i></div></div></header><div class="mdl-layout__drawer" aria-hidden="true"><span class="mdl-layout-title">CSSIx Modules</span><nav class="mdl-navigation"><a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/intro.html">Intro</a> <a class="mdl-navigation__link is-active" href="https://cssicurriculum.withgoogle.com/command-line.html">Command Line</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/html.html">HTML &amp; CSS</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/javascript.html">JavaScript</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/python.html">Python</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/app-engine.html">AppEngine</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/project.html">Project Week</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/git.html">Git</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/resources.html">Resources</a></nav></div><main class="mdl-layout__content cssi-main"><div class="mdl-grid"><div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div><div class="cssix-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col"><div class="post"><header class="post-header"><div><div class="PageNavigation"><a class="prev" href="https://cssicurriculum.withgoogle.com/command-line/command-line-frame.html">« Command Line Overview</a> <a class="next" href="https://cssicurriculum.withgoogle.com/command-line/around-the-world.html">Around the World Lab »</a></div></div></header><article class="post-content"><h1 id="command-line-lecture-guide">Command Line Lecture Guide</h1><h2 id="framing">Framing</h2><h3 id="context--purpose">Context &amp; purpose</h3><p>The command line is a way of controlling a computer without a mouse or a GUI (Graphical User Interface). Before Apple Computer started building machines with icons and folders you could click on, the only way to interact with your computer was through the command line.</p><p>As developers, we use the command line because it’s a lot faster and more powerful that the GUI - no need to waste time clicking around. The command line can allow you to perform pretty much any interaction you have with your computer.</p><p>Since the terminal is a much simpler interface, it has a big advantage over the GUI when you need to remotely connect to a computer over a network link. This is something that developers do very frequently - when traveling, for example.</p><p>In this lesson we’re going to learn the basic commands to interact with our computer by: creating files and directories, moving folders, changing directories, and listing the contents of a folder.</p><h3 id="learning-objectives">Learning objectives</h3><ul><li>Use Terminal to navigate files and folders</li><li>List out contents of a folder</li><li>Create files and folders on the command line</li><li>Move files and folders</li><li>Copy files and folders</li><li>Delete files and folders</li></ul><h3 id="sequence">Sequence</h3><ol><li><a href="https://cssicurriculum.withgoogle.com/command-line/command-line.html#getting-started">Getting Started</a></li><li><a href="https://cssicurriculum.withgoogle.com/command-line/command-line.html#changing-directories">Changing Directories</a></li><li><a href="https://cssicurriculum.withgoogle.com/command-line/command-line.html#making-files-and-directories">Making Files &amp; Directories</a></li><li><a href="https://cssicurriculum.withgoogle.com/command-line/command-line.html#moving-and-copying">Moving &amp; Copying</a></li><li><a href="https://cssicurriculum.withgoogle.com/command-line/command-line.html#student-resource">Student Resources</a></li></ol><h2 id="getting-started"><a id="getting-started"></a>Getting Started</h2><h3 id="accessing-the-terminal">Accessing the Terminal</h3><h4 id="section-purpose">Section purpose</h4><p>Terminal provides a Command Line Interface (CLI) to the operating system. With it you can give your computer direct, text-based instructions.</p><p>In order to do this, we need to launch your terminal based on the system that you’re using.</p><p>When terminal launches, it will start in your computer’s home directory (whatever you named your computer). Your home directory is denoted by the <strong>tilde <code class="highlighter-rouge">~</code></strong>.</p><p>When discussing our world inside the Terminal, <strong>Directories</strong> are the same as <strong>Folders</strong> (we may just call them <strong>Directories</strong> sometimes).</p><p></p><p>Mac Shortcut:</p><ul><li>Open <strong>Spotlight</strong> with <code class="highlighter-rouge">Command</code> + <code class="highlighter-rouge">space</code>.</li><li>Type <strong>Terminal</strong> in the <strong>Spotlight Search</strong></li></ul><h2 id="changing-directories"><a id="changing-directories"></a>Changing Directories</h2><h4 id="section-purpose-1">Section purpose</h4><p>In order to talk to our computer in the Terminal and tell it what we want to do, we need to speak a common language. The Command Line understands commands written in the <strong>bash scripting language</strong>. The commands are acronyms or abbreviations of English words.</p><h4 id="print-working-directory-pwd">Print Working Directory (pwd)</h4><p>When you’re navigating in your terminal, it’s important to know where you are (this translates directly to real life as well - if you want to get somewhere, you first have to know your current location).</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># See your current location - abbreviation for 'print working directory'</span>
+<span class="nb">pwd</span>
+</pre></td></tr></tbody></table></code></pre></div></div><h4 id="list-available-files-and-directories">List available files and directories</h4><p>Inside your <strong>working directory</strong>, there are likely several files you can access. Normally, we rely on visual cues like icons to tell us what’s available, but it would be difficult to navigate our computer if we were just guessing where files and folders were located. In the command line, we’ll use a specific command to <strong>list</strong> out what we can access from any given working directory / any given location.</p><p>In order to see which files or folders are in our current directory, use the <code class="highlighter-rouge">ls</code> command (an abbreviation for list) to see a list view of the contents.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># See files and folders in current location - abbreviation for 'list'</span>
+<span class="nb">ls</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p><h4 id="change-working-directory">Change working directory</h4><p>If you need access to a file or directory not present in the list, you might want to change your working directory in order to more easily access it.</p><p>The syntax to tell the Command Line to move you to a new <strong>directory</strong> (also known as a folder) is <code class="highlighter-rouge">cd</code> followed (on the same line) by the path to the new folder.</p><p>If you navigate to a directory that is inside the directory you’re currently in (i.e. a <strong>subfolder</strong> of your <strong>working directory</strong>), use the command <code class="highlighter-rouge">cd</code> followed by the name of the folder.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c"># Change your current working directory (current location)</span>
+<span class="c"># Abbreviation for 'change directory'</span>
+<span class="nb">cd </span>Documents
+</pre></td></tr></tbody></table></code></pre></div></div><p>You can also navigate starting at the home <strong>~</strong> directory.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># Add a `~/` to begin from the home directory.</span>
+<span class="nb">cd</span> ~/Downloads
+</pre></td></tr></tbody></table></code></pre></div></div><p>If you’ve changed directories but need to change back to the home directory, do so either by navigating directly back to home using <code class="highlighter-rouge">~</code>, or by using <code class="highlighter-rouge">..</code> to navigate up one level.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c"># Option 1: navigate directly to the home directory</span>
+<span class="nb">cd</span> ~
+
+<span class="c"># Option 2: navigate back one level</span>
+<span class="nb">cd</span> ..
+</pre></td></tr></tbody></table></code></pre></div></div><p>Note that <code class="highlighter-rouge">cd ..</code> only goes up (back) one level, so if you’ve changed directories three times so far (down three levels), you’ll need to use <code class="highlighter-rouge">cd ..</code> three times to go all the way home, but would only need to use <code class="highlighter-rouge">cd ~</code> once.</p><h4 id="mini-challenges">Mini-challenges</h4><ul><li>Use <code class="highlighter-rouge">ls</code> to see what’s inside your current directory.</li><li>Navigate back to your home directory and use <code class="highlighter-rouge">ls</code> to see the contents of your home folder.</li><li>Choose the name of one of the folders that are inside the home directory and navigate to this new folder.</li><li>Use the list command to see what’s inside.</li></ul><p></p><h4 id="protip-autocompletion-with-tab">Protip: Autocompletion with <code class="highlighter-rouge">tab</code></h4><p>When changing directories with the <code class="highlighter-rouge">cd</code> command, a single typo will prevent the command from executing correctly. However, using the <code class="highlighter-rouge">tab</code> key will autocomplete with the name of any available directories that are inside your current directory. So instead of typing <code class="highlighter-rouge">cd Documents</code>, type just <code class="highlighter-rouge">cd Do</code> and then press the tab key and the terminal will autocomplete the command <code class="highlighter-rouge">cd Documents/</code> for you (the <code class="highlighter-rouge">/</code> at the end is optional but lets you know that the destination is a directory).</p><p>This autocomplete not only saves time when it works, it also provides valuable information when it doesn’t work. If the tab button doesn’t autocomplete, you’ve likely made one of three really common issues:</p><ol><li>The directory you want to navigate to isn’t accessible from your current working directory.</li><li>There are two directories that have similar starting names (like <code class="highlighter-rouge">Documents</code> and <code class="highlighter-rouge">Downloads</code>) and you haven’t provided enough information for the autocomplete to know which one you want. Press <code class="highlighter-rouge">tab</code> again to see a list of the directories that could match what you’ve typed. Then type a little more (enough so that there’s only one match) and press <code class="highlighter-rouge">tab</code> again.</li><li>You’ve already included a typo in the first half of the word.</li></ol><p>The sooner you can get in the habit of using tab to autocomplte your commands, the more likely you will be to handle frustrating situations where your commands seem not to be working.</p><h4 id="parent-and-child-directories">Parent and Child Directories</h4><p>Directories and files can have <strong>child</strong> and <strong>parent</strong> relationships to each other. If <code class="highlighter-rouge">directory_b</code> is <em>inside</em> <code class="highlighter-rouge">directory_a</code>, <code class="highlighter-rouge">directory_b</code> is referred to as the <strong>child</strong> of <code class="highlighter-rouge">directory_a</code>. <code class="highlighter-rouge">directory_a</code> is then known as the <strong>parent</strong> of <code class="highlighter-rouge">directory_b</code>. If a third item, <code class="highlighter-rouge">my_file</code>, is inside of a <code class="highlighter-rouge">directory_b</code>, it is considered a child of <code class="highlighter-rouge">directory_b</code> and a <strong>grandchild</strong> of <code class="highlighter-rouge">directory_a</code>.</p><p>These relationships are often illustrated on forums with a text diagram, like this:</p><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>directory_a/
+  directory_b/
+    my_file
+</pre></td></tr></tbody></table></code></pre></div></div><p>Notice that directory names end in a <code class="highlighter-rouge">/</code> while file names do not. This hierarchical organization is generally referred to as the <strong>tree structure</strong> of a filesystem.</p><h4 id="siblings">Siblings</h4><p>If there are multiple files or folders on the same level, they are known as <strong>siblings</strong>. Ex: <code class="highlighter-rouge">directory_a</code> is the <strong>parent</strong> of <code class="highlighter-rouge">file_b</code> and <code class="highlighter-rouge">file_c</code>. <code class="highlighter-rouge">file_b</code> and <code class="highlighter-rouge">file_c</code> are located inside of <code class="highlighter-rouge">directory_a</code> and are <strong>siblings</strong>.</p><p>That text diagram would look like this:</p><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>directory_a/
+  file_b
+  file_c
+</pre></td></tr></tbody></table></code></pre></div></div><p>Note that since <code class="highlighter-rouge">file_b</code> and <code class="highlighter-rouge">file_c</code> are siblings, they are indented the same amount.</p><h4 id="file-paths">File Paths</h4><p>Here’s a more complex text diagram that features both parent-child and sibling relationships.</p><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre>north_america/
+  united_states/
+    new_york/
+      new_york_city/
+        manhattan
+        queens
+        staten_island
+        bronx
+        brooklyn
+    california/
+      mountain_view
+      los_angeles
+    illinois/
+      chicago
+  mexico/
+    mexico_city
+</pre></td></tr></tbody></table></code></pre></div></div><p>In this example, <code class="highlighter-rouge">new_york_city/</code> is a directory name, but it also has a <strong>path</strong>, which details how to get there: <code class="highlighter-rouge">~/north_america/united_states/new_york/new_york_city/</code>.</p><p>To change directory into <code class="highlighter-rouge">new_york_city/</code>, you could navigate in steps using names, or you could navigate all the way there in one command using the path.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c"># Option 1: in four steps, using directory names.</span>
+<span class="nb">cd</span> ~ <span class="c"># navigate home, where these folders are located</span>
+<span class="nb">cd </span>north_america/
+<span class="nb">cd </span>united_states/
+<span class="nb">cd </span>new_york/
+<span class="nb">cd </span>new_york_city/
+
+<span class="c"># Option 2: in one step, using the path.</span>
+<span class="nb">cd</span> ~/north_america/united_states/new_york/new_york_city/
+</pre></td></tr></tbody></table></code></pre></div></div><p></p><h6 id="summary-of-navigation-commands">Summary of Navigation Commands</h6><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="c"># See your current location - abbreviation for 'print working directory'</span>
+<span class="nb">pwd</span>
+
+<span class="c"># Change to a new location - abbreviation for 'change directory'</span>
+<span class="nb">cd</span> ~/Downloads
+
+<span class="c"># Navigates into a child directory called `some_directory`</span>
+<span class="c"># Only works if `some_directory` is a child of the current directory</span>
+<span class="nb">cd </span>some_directory
+
+<span class="c"># Navigates into the parent of the current directory</span>
+<span class="c"># `..` is shorthand for parent.</span>
+<span class="nb">cd</span> ..
+
+<span class="c"># Will take you back home</span>
+<span class="nb">cd</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p><h4 id="mini-challenges-1">Mini-challenges</h4><ul><li>Use <code class="highlighter-rouge">pwd</code> to find out the current folder that you’re in.</li><li>Change to a different directory and confirm your new location.</li><li>Try it again and navigate to a different folder. Use your new commands to see your location and also see the files inside this directory.</li></ul><h2 id="making-files--directories"><a id="making-files-and-directories"></a>Making Files &amp; Directories</h2><h4 id="section-purpose-2">Section purpose</h4><p>As developers, we will need to create <strong>files</strong> with code. To keep those files organized, we’ll need to create <strong>folders</strong> / <strong>directories</strong> where we can store our files.</p><p>Be aware of your location in the terminal before creating your files and folders.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># See your current location.</span>
+<span class="nb">pwd</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>To make a file, use the command <strong>touch</strong> followed by the file name.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># `touch` creates a new file.</span>
+<span class="nb">touch </span>style.css
+</pre></td></tr></tbody></table></code></pre></div></div><p>When creating files, add a <strong>file extension</strong> to specify the type. Example file types:</p><ul><li><code class="highlighter-rouge">.js</code> make as a JavaScript file</li><li><code class="highlighter-rouge">.html</code> make an HTML file</li><li><code class="highlighter-rouge">.css</code> makes a CSS file</li><li><code class="highlighter-rouge">.md</code> makes a markdown file</li></ul><p>The file names should not include spaces.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c"># make a file - this will create a file in the current folder</span>
+<span class="nb">touch </span>my_text_file.txt
+
+<span class="c"># make a file - this will create a file on the desktop</span>
+<span class="nb">touch</span> ~/Desktop/my_new_style_sheet.css
+</pre></td></tr></tbody></table></code></pre></div></div><h4 id="making-multiple-files">Making multiple files</h4><p>You can create multiple files at once by including spaces between each of the names.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="c"># make multiple files - this will create multiple files in the current folder</span>
+<span class="nb">touch </span>my_new_js_file.js my_new_html_file.html my_second_html_file.html
+</pre></td></tr></tbody></table></code></pre></div></div><h4 id="making-directories">Making directories</h4><p>To make a directory / folder, use the command <strong>mkdir</strong> - an abbreviation for ‘make directory’ - followed by the name of the folder.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c"># make a folder - this will create a directory in the current folder</span>
+<span class="nb">mkdir </span>my_new_folder
+
+<span class="c"># make a folder - this will create a directory on your desktop</span>
+<span class="nb">mkdir</span> ~/Desktop/my_new_desktop_folder
+</pre></td></tr></tbody></table></code></pre></div></div><h4 id="making-multiple-directories">Making multiple directories</h4><p>You can create multiple folders at once by including spaces between each of the names.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c"># make multiple folders - this will create multiple folders in the current</span>
+<span class="c"># directory</span>
+<span class="nb">mkdir </span>folder_one folder_two folder_three
+</pre></td></tr></tbody></table></code></pre></div></div><p></p><h4 id="mini-challenges-2">Mini-challenges</h4><ul><li>Create a new file.</li><li>Create a few files in one command.</li><li>Create a new directory.</li><li>Create a few more new directories. Try using just one command to do this.</li><li>Using what you know about navigating directories and creating files and folders, construct a ‘family_tree’ on your desktop using files and folders.</li></ul><h2 id="moving--copying"><a id="moving-and-copying"></a>Moving &amp; Copying</h2><h3 id="moving-files--directories">Moving Files &amp; Directories</h3><h4 id="section-purpose-3">Section purpose</h4><p>We can move a file or folder on the command line, but we always need to specify three things:</p><ol><li>We use the <code class="highlighter-rouge">mv</code> command - abbreviation for <strong>move</strong>.</li><li>Follow the move command with the name of the file or folder that you want to move.</li><li>Follow the name of the file with the destination where you want to move it.</li></ol><p>For example, if you have a file structure like this:</p><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>my_child_folder/
+my_parent_folder/
+</pre></td></tr></tbody></table></code></pre></div></div><p>You can see that it isn’t organized as it ought to be - they are siblings when they ought to be parent and child. Use this command:</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c"># move a directory - this will move the folder `my_child_folder` into the</span>
+<span class="c"># folder named `my_parent_folder` that is in the current folder</span>
+<span class="nb">mv </span>my_child_folder/ my_parent_folder/
+</pre></td></tr></tbody></table></code></pre></div></div><p>The resulting structure will looke like this.</p><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>my_parent_folder/
+  my_child_folder/
+</pre></td></tr></tbody></table></code></pre></div></div><p>Here are some other variations of the mv command:</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="c"># move a directory - this will move the folder `my_folder` into the file named</span>
+<span class="c"># `my_desktop_folder` that is located on the Desktop</span>
+<span class="nb">mv </span>my_folder ~/Desktop/my_desktop_folder
+
+<span class="c"># move a file - this will move the file `my_file.txt` into the file named</span>
+<span class="c"># `my_folder` that is in the current folder</span>
+<span class="nb">mv </span>my_file.txt my_folder
+
+<span class="c"># move a file - this will move the file `my_file.txt` into the file named</span>
+<span class="c"># `my_desktop_folder` that is located on the Desktop</span>
+<span class="nb">mv </span>my_file.txt ~/Desktop/my_desktop_folder
+</pre></td></tr></tbody></table></code></pre></div></div><p><strong>Warning:</strong> <code class="highlighter-rouge">mv</code> also happens to be the command to rename a file using the syntax <code class="highlighter-rouge">mv old_name new_name</code>. That means that if you <strong>move</strong> a file to a directory that does not exist, or if you misspell the destination, then the file itself will be renamed instead of moved.</p><p></p><h4 id="mini-challenges-3">Mini-challenges</h4><ol><li>Make 5 text (.txt) files.</li><li>Make a new directory.</li><li>Move the 5 files that you created into the folder.</li><li>Make a folder and move this new folder inside of another folder.</li></ol><h3 id="copying-files--directories">Copying Files &amp; Directories</h3><h4 id="section-purpose-4">Section purpose</h4><p>As we build our webapps, we may wish to duplicate a file (if we’re building two similar webpages, we might not want to start over from scratch), and the syntax for the <code class="highlighter-rouge">cp</code> (copy) command is really similar to the <code class="highlighter-rouge">mv</code> syntax.</p><h4 id="copying-a-file">Copying a file</h4><p>The copy command has three parts:</p><ol><li>The command <code class="highlighter-rouge">cp</code> - abbreviation for <strong>copy</strong></li><li>The name of the file to be copied</li><li>The name of the copy (if staying in the same folder) or the location and name (if moving to a different folder).</li></ol><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c"># Copy a file named `my_file.txt` to a file called `my_file_copy.txt`</span>
+<span class="c"># The copy will be located in your Documents folder.</span>
+<span class="nb">cp </span>my_file.txt ~/Documents/my_file_copy.txt
+
+<span class="c"># Copy a file named `my_file.txt` to a file called `my_file_copy.txt`.</span>
+<span class="c"># Since no directory was specified, this will occur within the same folder.</span>
+<span class="nb">cp </span>my_file.txt my_file_copy.txt
+</pre></td></tr></tbody></table></code></pre></div></div><p>If you want the copy to retain the same name as the original, you can specify the copy location without a file name.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c"># Copy a file named `my_file.txt` to your Documents folder.</span>
+<span class="c"># The destination ends with a directory, so the copy will have the same name.</span>
+<span class="nb">cp </span>my_file.txt ~/Documents/
+</pre></td></tr></tbody></table></code></pre></div></div><p>Having lots of files with the same name can be confusing, so only use this method if you’re certain it’s what you need.</p><h4 id="copying-a-directory">Copying a directory</h4><p>Copying a folder or directory is a little more complicated, because you likely want to copy not just the folder, but also everything inside of it.</p><ol><li>The command <code class="highlighter-rouge">cp -R</code> - abbreviation for <strong>copy recursive</strong> - use this for both empty and non-empty folders</li><li>The source name (folder or file that we want to move)</li><li>The name of the copy (if staying in the same folder) or the location and name (if moving to a different folder).</li></ol><p><strong>Warning</strong>: When specifying the name for the copy, if the file or folder was not created previously, it will be created when you make the copy. If the file was created before you run the copy command, it will overwrite anything that was previously in the file, so be careful!</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c"># copy a directory named `my_folder` from your Desktop folder to a folder</span>
+<span class="c"># called `my_folder_copy` in your Documents folder</span>
+<span class="nb">cp</span> <span class="nt">-R</span> ~/Desktop/my_folder ~/Documents/my_folder_copy
+
+<span class="c"># copy a file named `my_file.txt` from your Desktop folder to your Documents</span>
+<span class="c"># folder</span>
+<span class="nb">cp</span> <span class="nt">-R</span> my_folder my_folder_copy
+</pre></td></tr></tbody></table></code></pre></div></div><p>Note: the <code class="highlighter-rouge">-R</code> component of the <code class="highlighter-rouge">cp -R</code> is called a <strong>flag</strong>. Flags always start with a dash, and are used in combinations with commands to give more specific instructions for how that command is to be executed.</p><p></p><h4 id="mini-challenges-4">Mini-challenges</h4><ol><li>Create a file called <code class="highlighter-rouge">my_original.txt</code></li><li>Make a copy of <code class="highlighter-rouge">my_original.txt</code> named something new in the same folder.</li><li>Make a new directory.</li><li>Make a copy of that directory, but name it something different.</li><li>Make a copy your copied file (from step 2) but place it into the copied directory (from step 4).</li></ol><h3 id="removing-files--folders">Removing Files &amp; Folders</h3><h4 id="section-files-and-folders-on-the-command-line-but-doing-so-is">Section files and folders on the command line, but doing so is</h4><p>permanent.</p><h4 id="removing-a-file">Removing a file</h4><p>To remove a <strong>file</strong>, we can use the command <code class="highlighter-rouge">rm</code> (abbreviation for <strong>remove</strong>) followed by the name of the file.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c"># delete a file in the working directory</span>
+<span class="nb">rm </span>unwanted_file.txt
+
+<span class="c"># delete a file not in the working directory</span>
+<span class="nb">rm</span> ~/Desktop/unwanted_file.txt
+</pre></td></tr></tbody></table></code></pre></div></div><h4 id="removing-a-directory-that-is-empty">Removing a directory that is empty</h4><p>To remove an <em>empty</em> <strong>directory</strong>, we can use the command <code class="highlighter-rouge">rmdir</code> - abbreviation for <strong>remove directory</strong> - followed by the name of the folder.</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c"># delete an empty folder</span>
+<span class="nb">rmdir </span>empty_directory
+
+<span class="c"># delete an empty folder</span>
+<span class="nb">rmdir</span> ~/Documents/my_files/empty_directory
+</pre></td></tr></tbody></table></code></pre></div></div><h4 id="removing-a-directory-that-is-not-empty">Removing a directory that is not empty</h4><p>To remove a folder that is <em>not empty</em>, we have to put a flag <code class="highlighter-rouge">-R</code> - abbreviation for <strong>recursive</strong> - after the <code class="highlighter-rouge">rm</code> command which tells the computer to delete the contents inside of the folder. As a shortcut, some developers use the flag <code class="highlighter-rouge">-Rf</code> which <strong>forcefully</strong> removes everything (otherwise, you may receive prompts about deleting some of the child files or folders).</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c"># delete a folder which contains other files or folders</span>
+<span class="nb">rm</span> <span class="nt">-R</span> directory_which_isnt_empty
+
+<span class="c"># delete a folder which contains other files or folders</span>
+<span class="nb">rm</span> <span class="nt">-R</span> ~/Downloads/directory_which_isnt_empty
+</pre></td></tr></tbody></table></code></pre></div></div><p><strong>Warning</strong>: Using the rm command is not like the recycle bin or the deleted section of your email - these files cannot be easily recovered. Be EXTREMELY CAUTIOUS when deleting files in this way.</p><p></p><h4 id="mini-challenges-5">Mini-challenges</h4><ol><li>Create 4 files.</li><li>Delete 2 of the files.</li><li>Create a folder.</li><li>Create another folder and create a file inside this folder.</li><li>Delete both of the directories.</li></ol></article><footer class="post-footer"><hr><div class="PageNavigation"><a class="prev" href="https://cssicurriculum.withgoogle.com/command-line/command-line-frame.html">« Command Line Overview</a> <a class="next" href="https://cssicurriculum.withgoogle.com/command-line/around-the-world.html">Around the World Lab »</a></div></footer></div></div></div></main><footer class="mdl-mini-footer section"><div class="mdl-mini-footer__left-section"><div class="lockup va"><span class="lockup-logo lockup-dark"></span></div></div><div class="mdl-mini-footer__right-section"><ul class="mdl-mini-footer__link-list"><li><span id="site_label">CSSI - Atlanta</span></li><li>--</li><li><a href="https://www.google.com/intl/en/about/">About Google</a></li><li><a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a></li><li><a href="https://www.google.com/intl/en/policies/terms/">Terms</a></li><li><a href="https://cssicurriculum.withgoogle.com/command-line/command-line.html#" id="signout_link">Logout</a></li><li><a href="https://cssicurriculum.withgoogle.com/command-line/command-line.html#" id="forgetme_link">Forget Me</a></li></ul></div><script src="./Command Line Lecture Guide_files/firebase-app.js.download"></script><script src="./Command Line Lecture Guide_files/firebase-auth.js.download"></script><script src="./Command Line Lecture Guide_files/firebaseui.js.download"></script><link href="./Command Line Lecture Guide_files/firebaseui.css" rel="stylesheet" type="text/css"><script>
+  function getCookie(name) {
+    let dc = document.cookie;
+    let prefix = name + "=";
+    let begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+      begin = dc.indexOf(prefix);
+      if (begin != 0) return null;
+    }
+    begin += 2;
+    let end = document.cookie.indexOf(";", begin);
+    if (end == -1) {
+      end = dc.length;
+    }
+    return decodeURI(dc.substring(begin + prefix.length, end));
+  }
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD_NpvZGlms1zebBgfE4RZPCim5irYGbG4",
+    authDomain: "cssi-curriculum.firebaseapp.com",
+    databaseURL: "https://cssi-curriculum.firebaseio.com",
+    projectId: "cssi-curriculum",
+    storageBucket: "cssi-curriculum.appspot.com",
+    messagingSenderId: "443846997353"
+  };
+  // Firebase log-in widget
+  function configureFirebaseLoginWidget() {
+    let uiConfig = {
+      signInSuccessUrl: '/',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        {
+            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            // Whether the display name should be displayed in the Sign Up page.
+            requireDisplayName: false,
+        },
+      ],
+      callbacks: {
+        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+          let user = authResult.user;
+          let credential = authResult.credential;
+          let isNewUser = authResult.additionalUserInfo.isNewUser;
+          let providerId = authResult.additionalUserInfo.providerId;
+          let operationType = authResult.operationType;
+          // Do something with the returned AuthResult.
+          // Return type determines whether we continue the redirect automatically
+          // or whether we leave that to developer to handle.
+          return true;
+        },
+        signInFailure: function(error) {
+          // Some unrecoverable error occurred during sign-in.
+          // Return a promise when error handling is completed and FirebaseUI
+          // will reset, clearing any UI. This commonly occurs for error code
+          // 'firebaseui/anonymous-upgrade-merge-conflict' when merge conflict
+          // occurs. Check below for more details on this.
+          return handleUIError(error);
+        },
+      },
+      // Terms of service url
+      'tosUrl': 'https://www.google.com/intl/en/policies/terms/',
+    };
+
+    let user = firebase.auth().currentUser;
+    if (!user && document.getElementById('firebaseui-auth-container')) {
+      let ui = new firebaseui.auth.AuthUI(firebase.auth());
+      ui.start('#firebaseui-auth-container', uiConfig);
+    }
+  }
+
+  function updateUserToken(user) {
+    let oldCookie = getCookie('idToken');
+    if (user) {
+      let refresh_token = getCookie('needRefreshToken');
+      user.getIdToken(refresh_token == 'true').then(function(idToken) {
+        document.cookie = "idToken=" + idToken + "; path=/";
+        if (!oldCookie) {
+          location.reload();
+        }
+      });
+    } else {
+      console.log("Removing auth token");
+      document.cookie = "idToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+      if (oldCookie) {
+        location.reload();
+      }
+    }
+  }
+
+  function configureFirebaseLogin() {
+    firebase.initializeApp(config);
+    firebase.auth().onAuthStateChanged(updateUserToken);
+    firebase.auth().onIdTokenChanged(function() {console.log("token changed");});
+  }
+
+  function signOut() {
+    firebase.auth().signOut();
+    window.location = "/";
+    return false;
+  }
+
+  function forgetMe() {
+    let user = firebase.auth().currentUser;
+    user.delete().then(function() {
+      console.log("User deleted");
+    }).catch(function(error) {
+      console.log("Error deleting the user " + error);
+    });
+    firebase.auth().signOut();
+    window.location = "/";
+    return false;
+  }
+
+  function sendVerificationEmail() {
+    let user = firebase.auth().currentUser;
+    if (user && !user.emailVerified) {
+      user.sendEmailVerification().then(function() {
+          console.log("Verification email sent.");
+        }).catch(function(error) {
+          console.log("An error happened while sending the verification email.");
+        });
+    } else if (user) {
+      console.log("Email already verified");
+    } else {
+      console.log("User not logged in");
+    }
+    console.log("Removing auth token");
+    document.cookie = "idToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.querySelector('#send_verification_button').style.display = 'None';
+    document.querySelector('#verification_sent').style.display = 'block';
+  }
+
+  function checkAndRestoreCookie(){
+    let user = firebase.auth().currentUser;
+  }
+
+  function showAnswer(event) {
+    let show_answer_button = event.currentTarget;
+    let answer_container = show_answer_button.parentElement;
+    toggleAnswer(answer_container, true);
+  }
+
+  function hideAnswer(event) {
+    let show_answer_button = event.currentTarget;
+    let answer_container = show_answer_button.parentElement;
+    toggleAnswer(answer_container, false);
+  }
+
+  function toggleAnswer(container, visible) {
+    let answer = container.querySelector('.answer');
+    answer.style.display = visible ? 'block' : 'none';
+    let hide_answer_button = container.querySelector('.hide_answer');
+    hide_answer_button.style.display = visible ? 'block' : 'none';
+    let show_answer_button = container.querySelector('.show_answer');
+    show_answer_button.style.display = visible ? 'none' : 'block';
+  }
+
+  function toggleStudentViewCookie(event) {
+    const new_value = event.target.checked;
+    document.cookie = "student_view=" + new_value + ";path=/";
+    location.reload();
+  }
+
+  window.addEventListener('load', function() {
+    configureFirebaseLogin();
+    configureFirebaseLoginWidget();
+    //checkAndRestoreCookie();
+    let signout_link = document.querySelector('#signout_link');
+    if (signout_link) {
+      signout_link.onclick = signOut;
+    }
+    let forgetme_link = document.querySelector('#forgetme_link');
+    if (forgetme_link) {
+      forgetme_link.onclick = forgetMe;
+    }
+    let email_verification_btn = document.querySelector('#send_verification_button');
+    if (email_verification_btn) {
+      email_verification_btn.onclick = sendVerificationEmail;
+    }
+    let show_answer_btns = document.querySelectorAll('.show_answer');
+    show_answer_btns.forEach( function(element) {
+      element.onclick = showAnswer;
+    });
+    let hide_answer_btns = document.querySelectorAll('.hide_answer');
+    hide_answer_btns.forEach( function(element) {
+      element.onclick = hideAnswer;
+    });
+    // Student View checkbox not available on all pages, if present,
+    // it can be used to override the user role, so that instructors can view
+    // content as students.
+    let student_view_flag = document.querySelector('#chk_student_view');
+    if (student_view_flag) {
+      student_view_flag.checked = JSON.parse(getCookie('student_view'));
+      student_view_flag.onclick = toggleStudentViewCookie;
+    }
+    // Select the proper element in the site selection view based on the
+    // existing cookies.
+    let selected_site = getCookie('site');
+    let site_selector_list = document.querySelectorAll('.site_radio');
+    [].forEach.call(site_selector_list, (element) => {
+      element.addEventListener('click', () => {
+        console.log('Clicked ' + element.value);
+        document.cookie = "site=" + element.value + ";path=/";
+        document.querySelector('#site_label').innerText = element.dataset.label;
+      });
+    });
+    if (selected_site && site_selector_list.length > 0) {
+      [].forEach.call(site_selector_list, (element) => {
+        console.log(selected_site);
+        if (element.value === selected_site) {
+          element.checked = true;
+        } else {
+          element.checked = false;
+        }
+      });
+      console.log(site_selector_list);
+    }
+
+  })
+</script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101261509-1', 'auto');
+  ga('send', 'pageview');
+</script></footer><div class="mdl-layout__obfuscator"></div></div></div></body></html>

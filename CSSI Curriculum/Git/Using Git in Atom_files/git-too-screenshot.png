@@ -1,0 +1,234 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta content="IE=edge" http-equiv="X-UA-Compatible"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>That's an error</title><meta content="
+          
+              Welcome to CSSI.
+The Computer Science Summer Institute is a three week program for rising college freshmen starting a degree in Computer Science or a related field. This site houses the curriculum for the three week course.
+
+          " name="description"/><link href="/favicon.ico" rel="shortcut icon"/><link href="//code.getmdl.io/1.3.0/material.indigo-yellow.min.css" rel="stylesheet"/><link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/><script defer="" src="//code.getmdl.io/1.2.1/material.min.js"></script><link href="/css/cssix.css" rel="stylesheet"/><link href="/css/main.css" rel="stylesheet"/><link href="http://cssicurriculum.withgoogle.com/404" rel="canonical"/><link href="http://cssicurriculum.withgoogle.com/feed.xml" rel="alternate" title="Google CSSI" type="application/rss+xml"/></head><body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-cssix"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button"><header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary mdl-color-text--white"><div class="mdl-layout--large-screen-only mdl-layout__header-row"></div><div class="mdl-layout__header-row"><a href="/" id="cssilogo_header"></a></div><div class="mdl-layout--large-screen-only mdl-layout__header-row"></div></header><main class="mdl-layout__content cssi-main"><div class="mdl-grid"><div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div><div class="cssix-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col"><h2 id="error-404">Error 404</h2><p>The resource you are trying to access could not be located.</p></div></div></main><footer class="mdl-mini-footer section"><div class="mdl-mini-footer__left-section"><div class="lockup va"><span class="lockup-logo lockup-dark"></span></div></div><div class="mdl-mini-footer__right-section"><ul class="mdl-mini-footer__link-list"><li><a href="https://www.google.com/intl/en/about/">About Google</a></li><li><a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a></li><li><a href="https://www.google.com/intl/en/policies/terms/">Terms</a></li></ul></div><script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script><script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script><script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script><link href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" rel="stylesheet" type="text/css"/><script>
+  function getCookie(name) {
+    let dc = document.cookie;
+    let prefix = name + "=";
+    let begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+      begin = dc.indexOf(prefix);
+      if (begin != 0) return null;
+    }
+    begin += 2;
+    let end = document.cookie.indexOf(";", begin);
+    if (end == -1) {
+      end = dc.length;
+    }
+    return decodeURI(dc.substring(begin + prefix.length, end));
+  }
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD_NpvZGlms1zebBgfE4RZPCim5irYGbG4",
+    authDomain: "cssi-curriculum.firebaseapp.com",
+    databaseURL: "https://cssi-curriculum.firebaseio.com",
+    projectId: "cssi-curriculum",
+    storageBucket: "cssi-curriculum.appspot.com",
+    messagingSenderId: "443846997353"
+  };
+  // Firebase log-in widget
+  function configureFirebaseLoginWidget() {
+    let uiConfig = {
+      signInSuccessUrl: '/',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        {
+            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            // Whether the display name should be displayed in the Sign Up page.
+            requireDisplayName: false,
+        },
+      ],
+      callbacks: {
+        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+          let user = authResult.user;
+          let credential = authResult.credential;
+          let isNewUser = authResult.additionalUserInfo.isNewUser;
+          let providerId = authResult.additionalUserInfo.providerId;
+          let operationType = authResult.operationType;
+          // Do something with the returned AuthResult.
+          // Return type determines whether we continue the redirect automatically
+          // or whether we leave that to developer to handle.
+          return true;
+        },
+        signInFailure: function(error) {
+          // Some unrecoverable error occurred during sign-in.
+          // Return a promise when error handling is completed and FirebaseUI
+          // will reset, clearing any UI. This commonly occurs for error code
+          // 'firebaseui/anonymous-upgrade-merge-conflict' when merge conflict
+          // occurs. Check below for more details on this.
+          return handleUIError(error);
+        },
+      },
+      // Terms of service url
+      'tosUrl': 'https://www.google.com/intl/en/policies/terms/',
+    };
+
+    let user = firebase.auth().currentUser;
+    if (!user && document.getElementById('firebaseui-auth-container')) {
+      let ui = new firebaseui.auth.AuthUI(firebase.auth());
+      ui.start('#firebaseui-auth-container', uiConfig);
+    }
+  }
+
+  function updateUserToken(user) {
+    let oldCookie = getCookie('idToken');
+    if (user) {
+      let refresh_token = getCookie('needRefreshToken');
+      user.getIdToken(refresh_token == 'true').then(function(idToken) {
+        document.cookie = "idToken=" + idToken + "; path=/";
+        if (!oldCookie) {
+          location.reload();
+        }
+      });
+    } else {
+      console.log("Removing auth token");
+      document.cookie = "idToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+      if (oldCookie) {
+        location.reload();
+      }
+    }
+  }
+
+  function configureFirebaseLogin() {
+    firebase.initializeApp(config);
+    firebase.auth().onAuthStateChanged(updateUserToken);
+    firebase.auth().onIdTokenChanged(function() {console.log("token changed");});
+  }
+
+  function signOut() {
+    firebase.auth().signOut();
+    window.location = "/";
+    return false;
+  }
+
+  function forgetMe() {
+    let user = firebase.auth().currentUser;
+    user.delete().then(function() {
+      console.log("User deleted");
+    }).catch(function(error) {
+      console.log("Error deleting the user " + error);
+    });
+    firebase.auth().signOut();
+    window.location = "/";
+    return false;
+  }
+
+  function sendVerificationEmail() {
+    let user = firebase.auth().currentUser;
+    if (user && !user.emailVerified) {
+      user.sendEmailVerification().then(function() {
+          console.log("Verification email sent.");
+        }).catch(function(error) {
+          console.log("An error happened while sending the verification email.");
+        });
+    } else if (user) {
+      console.log("Email already verified");
+    } else {
+      console.log("User not logged in");
+    }
+    console.log("Removing auth token");
+    document.cookie = "idToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.querySelector('#send_verification_button').style.display = 'None';
+    document.querySelector('#verification_sent').style.display = 'block';
+  }
+
+  function checkAndRestoreCookie(){
+    let user = firebase.auth().currentUser;
+  }
+
+  function showAnswer(event) {
+    let show_answer_button = event.currentTarget;
+    let answer_container = show_answer_button.parentElement;
+    toggleAnswer(answer_container, true);
+  }
+
+  function hideAnswer(event) {
+    let show_answer_button = event.currentTarget;
+    let answer_container = show_answer_button.parentElement;
+    toggleAnswer(answer_container, false);
+  }
+
+  function toggleAnswer(container, visible) {
+    let answer = container.querySelector('.answer');
+    answer.style.display = visible ? 'block' : 'none';
+    let hide_answer_button = container.querySelector('.hide_answer');
+    hide_answer_button.style.display = visible ? 'block' : 'none';
+    let show_answer_button = container.querySelector('.show_answer');
+    show_answer_button.style.display = visible ? 'none' : 'block';
+  }
+
+  function toggleStudentViewCookie(event) {
+    const new_value = event.target.checked;
+    document.cookie = "student_view=" + new_value + ";path=/";
+    location.reload();
+  }
+
+  window.addEventListener('load', function() {
+    configureFirebaseLogin();
+    configureFirebaseLoginWidget();
+    //checkAndRestoreCookie();
+    let signout_link = document.querySelector('#signout_link');
+    if (signout_link) {
+      signout_link.onclick = signOut;
+    }
+    let forgetme_link = document.querySelector('#forgetme_link');
+    if (forgetme_link) {
+      forgetme_link.onclick = forgetMe;
+    }
+    let email_verification_btn = document.querySelector('#send_verification_button');
+    if (email_verification_btn) {
+      email_verification_btn.onclick = sendVerificationEmail;
+    }
+    let show_answer_btns = document.querySelectorAll('.show_answer');
+    show_answer_btns.forEach( function(element) {
+      element.onclick = showAnswer;
+    });
+    let hide_answer_btns = document.querySelectorAll('.hide_answer');
+    hide_answer_btns.forEach( function(element) {
+      element.onclick = hideAnswer;
+    });
+    // Student View checkbox not available on all pages, if present,
+    // it can be used to override the user role, so that instructors can view
+    // content as students.
+    let student_view_flag = document.querySelector('#chk_student_view');
+    if (student_view_flag) {
+      student_view_flag.checked = JSON.parse(getCookie('student_view'));
+      student_view_flag.onclick = toggleStudentViewCookie;
+    }
+    // Select the proper element in the site selection view based on the
+    // existing cookies.
+    let selected_site = getCookie('site');
+    let site_selector_list = document.querySelectorAll('.site_radio');
+    [].forEach.call(site_selector_list, (element) => {
+      element.addEventListener('click', () => {
+        console.log('Clicked ' + element.value);
+        document.cookie = "site=" + element.value + ";path=/";
+        document.querySelector('#site_label').innerText = element.dataset.label;
+      });
+    });
+    if (selected_site && site_selector_list.length > 0) {
+      [].forEach.call(site_selector_list, (element) => {
+        console.log(selected_site);
+        if (element.value === selected_site) {
+          element.checked = true;
+        } else {
+          element.checked = false;
+        }
+      });
+      console.log(site_selector_list);
+    }
+
+  })
+</script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101261509-1', 'auto');
+  ga('send', 'pageview');
+</script></footer></div></body></html>

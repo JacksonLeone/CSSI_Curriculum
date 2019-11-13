@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html -->
+<html class="gr__cssicurriculum_withgoogle_com mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width, initial-scale=1" name="viewport"><title>Python Basics Lecture Guide</title><meta content="
+          
+              Python Basics Lecture Guide
+          " name="description"><link href="https://cssicurriculum.withgoogle.com/favicon.ico" rel="shortcut icon"><link href="./Python Basics Lecture Guide_files/material.indigo-yellow.min.css" rel="stylesheet"><link href="./Python Basics Lecture Guide_files/icon" rel="stylesheet"><script async="" src="./Python Basics Lecture Guide_files/analytics.js.download"></script><script defer="" src="./Python Basics Lecture Guide_files/material.min.js.download"></script><style>html,body{font-family:'Roboto','Helvetica',sans-serif;margin:0;padding:0}#verification_sent{display:None}.cssix-intro.mdl-card{width:99%;margin-bottom:2em}.cssix-intro.mdl-card>.mdl-card__supporting_text{padding:1em}.mdl-layout__header-row h3 a{color:white;text-decoration:none}#cssilogo_header{content:url('/cssilogo.png');width:80%}.admin_nav_link{color:red}.mdl-cssix .mdl-layout__header-row{padding-left:40px}.mdl-cssix .mdl-layout.is-small-screen .mdl-layout__header-row h3{font-size:inherit;padding-left:12px}.mdl-cssix .mdl-layout__tab-bar-button{display:none}.mdl-cssix .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button{display:none}.mdl-cssix .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,.mdl-cssix .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container{overflow:visible}.cssi-main{overflow-x:visible!important;overflow-y:visible!important;overflow:visible!important}.mdl-cssix .mdl-layout__tab-bar-container{height:64px}.mdl-cssix .mdl-layout__tab-bar{padding:0;padding-left:16px;box-sizing:border-box;height:100%;width:100%}.mdl-cssix .mdl-layout__tab-bar .mdl-layout__tab{height:64px;line-height:64px;color:white}.mdl-cssix .mdl-layout__tab-bar .mdl-layout__tab.is-active::after{height:4px}.mdl-cssix main>.mdl-layout__tab-panel{padding:8px;padding-top:48px}.mdl-layout__tab#header_logout{background-color:red}.mdl-cssix .mdl-card{height:auto;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.mdl-cssix .mdl-card>*{height:auto}.mdl-cssix .mdl-card .mdl-card__supporting-text{margin:40px;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;padding:0;color:inherit;width:calc(100% - 80px)}.mdl-cssix .mdl-card__supporting-text h4{margin-top:0;margin-bottom:20px}.mdl-cssix .mdl-card__actions{margin:0;padding:4px 40px;color:inherit}.mdl-cssix .mdl-card__actions a{color:#00BCD4;margin:0}.mdl-cssix .mdl-card__actions a:hover,.mdl-cssix .mdl-card__actions a:active{color:inherit;background-color:transparent}.mdl-cssix .mdl-card__supporting-text+.mdl-card__actions{border-top:1px solid rgba(0,0,0,0.12)}.mdl-cssix #add{position:absolute;right:40px;top:36px;z-index:999}.mdl-list__item{min-height:.4em;padding:.3em}.material-icons.md-18{font-size:18px}.material-icons.md-24{font-size:24px}.material-icons.md-36{font-size:36px}.material-icons.md-48{font-size:48px}.post-list .toc_icon{vertical-align:middle;margin:.1em 1em}.mdl-cssix .mdl-layout__content section:not(:last-of-type){position:relative;margin-bottom:48px}.mdl-cssix section.section--center{max-width:860px}.mdl-cssix #features section.section--center{max-width:620px}.mdl-cssix section>header{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.mdl-cssix section>.section__play-btn{min-height:200px}.mdl-cssix section>header>.material-icons{font-size:3rem}.mdl-cssix section>button{position:absolute;z-index:99;top:8px;right:8px}.mdl-cssix section .section__circle{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:1;-ms-flex-negative:1;flex-shrink:1}.mdl-cssix section .section__text{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;padding-top:8px}.mdl-cssix section .section__text h5{font-size:inherit;margin:0;margin-bottom:.5em}.mdl-cssix section .section__text a{text-decoration:none}.mdl-cssix section .section__circle-container>.section__circle-container__circle{width:64px;height:64px;border-radius:32px;margin:8px 0}.mdl-cssix section.section--footer .section__circle--big{width:100px;height:100px;border-radius:50px;margin:8px 32px}.mdl-cssix .is-small-screen section.section--footer .section__circle--big{width:50px;height:50px;border-radius:25px;margin:8px 16px}.mdl-cssix section.section--footer{padding:64px 0;margin:0 -8px -8px -8px}.mdl-cssix section.section--center .section__text:not(:last-child){border-bottom:1px solid rgba(0,0,0,.13)}.mdl-cssix .mdl-card .mdl-card__supporting-text>h3:first-child{margin-bottom:24px}.mdl-cssix .mdl-layout__tab-panel:not(#overview){background-color:white}.mdl-cssix #features section{margin-bottom:72px}.mdl-cssix #features h4,#features h5{margin-bottom:16px}.mdl-cssix .toc{border-left:4px solid #C1EEF4;margin:24px;padding:0;padding-left:8px;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.mdl-cssix .toc h4{font-size:.9rem;margin-top:0}.mdl-cssix .toc a{color:#4DD0E1;text-decoration:none;font-size:16px;line-height:28px;display:block}.mdl-cssix .mdl-menu__container{z-index:99}.cssix-content{border-radius:2px;padding:80px 56px;margin-bottom:16px}.is-small-screen .cssix-content{padding:0 8px 16px 12px}.cssix-content a{color:#03a9f4!important}div.instructor{border:2px solid red;border-radius:12px;padding:10px}div.instructor::before{content:"Instructor Notes(The students will not see this content):";display:block;color:red;font-weight:bold}a.instructor-notes-link{color:green!important}div.unpublished{border:2px solid green;border-radius:12px;padding:10px;background-color:#deffd1}div.unpublished::before{content:"This content is not released to students yet";color:red;font-weight:bold}a.unpublished-link{color:red!important}a.next{float:right}.post-content img{width:50%;display:block;margin:auto}.post-content img.large_img{width:80%;display:block;margin:auto}.is-small-screen .mdl-layout__tab-bar-container{display:none}.mdl-layout.is-upgraded .mdl-layout__tab.is-active{color:yellow;font-weight:bold}.mdl-layout__tab.admin_link{background-color:#c71414}.mdl-layout__header .mdl-layout__drawer-button{color:yellow!important}. .mdl-mini-footer{border-top:1px solid #ccc;background-color:inherit!important;padding:8px 16px}footer .lockup{padding-left:15px;padding-top:10px}.lockup-logo,.lockup-text{display:inline-block}.va{vertical-align:middle;line-height:0}.lockup-logo{width:74px;height:24px;background-image:url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png);background-size:74px 24px}.lockup-logo.lockup-dark{background-image:url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_dark_color_74x24dp.png);opacity:.54}@media(max-width:760px){footer .lockup{padding-top:0}}.answer{display:none;border:2px solid green;border-radius:12px;padding:1em}.hide_answer.mdl-button.mdl-js-button{display:none;!important}body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,dl,dd,ol,ul,figure{margin:0;padding:0}body{font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:300;color:#111;background-color:yellow;-webkit-text-size-adjust:100%}h1,h2,h3,h4,h5,h6,p,blockquote,pre,ul,ol,dl,figure,.highlight{margin-bottom:15px}img{max-width:100%;vertical-align:middle;display:block}figure>img{display:block}figcaption{font-size:14px}ul,ol{margin-left:30px}li>ul,li>ol{margin-bottom:0}h1,h2,h3,h4,h5,h6{font-weight:300}a{color:#2a7ae2;text-decoration:none}a:visited{color:#1756a9}a:hover{color:#111;text-decoration:underline}blockquote{color:#828282;border-left:4px solid #e8e8e8;padding-left:15px;font-size:18px;letter-spacing:-1px;font-style:italic}blockquote>:last-child{margin-bottom:0}pre,code{font-size:15px;border:1px solid #e8e8e8;border-radius:3px;background-color:#eef}code{padding:1px 5px}pre{padding:8px 12px;overflow-x:scroll}pre>code{border:0;padding-right:0;padding-left:0}.wrapper{max-width:-webkit-calc(800px -(30px * 2));max-width:calc(800px -(30px * 2));margin-right:auto;margin-left:auto;padding-right:30px;padding-left:30px}@media screen and (max-width:800px){.wrapper{max-width:-webkit-calc(800px -(30px));max-width:calc(800px -(30px));padding-right:15px;padding-left:15px}}.wrapper:after,.footer-col-wrapper:after{content:"";display:table;clear:both}.icon>svg{display:inline-block;width:16px;height:16px;vertical-align:middle}.icon>svg path{fill:#828282}.site-header{border-top:5px solid #424242;border-bottom:1px solid #e8e8e8;min-height:56px;position:relative}.site-title{font-size:26px;line-height:56px;letter-spacing:-1px;margin-bottom:0;float:left}.site-title,.site-title:visited{color:#424242}.sidebar-nav{float:left;border-right:1px solid #e8e8e8}.site-nav{float:right;line-height:56px}.site-nav .menu-icon{display:none}.site-nav .page-link{color:#111;line-height:1.5}.site-nav .page-link:not(:first-child){margin-left:20px}@media screen and (max-width:600px){.site-nav{position:absolute;top:9px;right:30px;background-color:yellow;border:1px solid #e8e8e8;border-radius:5px;text-align:right}.site-nav .menu-icon{display:block;float:right;width:36px;height:26px;line-height:0;padding-top:10px;text-align:center}.site-nav .menu-icon>svg{width:18px;height:15px}.site-nav .menu-icon>svg path{fill:#424242}.site-nav .trigger{clear:both;display:none}.site-nav:hover .trigger{display:block;padding-bottom:5px}.site-nav .page-link{display:block;padding:5px 10px}}.site-footer{border-top:1px solid #e8e8e8;padding:30px 0}.footer-heading{font-size:18px;margin-bottom:15px}.contact-list,.social-media-list{list-style:none;margin-left:0}.footer-col-wrapper{font-size:15px;color:#828282;margin-left:-15px}.footer-col{float:left;margin-bottom:15px;padding-left:15px}.footer-col-1{width:-webkit-calc(35% -(30px / 2));width:calc(35% -(30px / 2))}.footer-col-2{width:-webkit-calc(20% -(30px / 2));width:calc(20% -(30px / 2))}.footer-col-3{width:-webkit-calc(45% -(30px / 2));width:calc(45% -(30px / 2))}@media screen and (max-width:800px){.footer-col-1,.footer-col-2{width:-webkit-calc(50% -(30px / 2));width:calc(50% -(30px / 2))}.footer-col-3{width:-webkit-calc(100% -(30px / 2));width:calc(100% -(30px / 2))}}@media screen and (max-width:600px){.footer-col{float:none;width:-webkit-calc(100% -(30px / 2));width:calc(100% -(30px / 2))}}.page-content{padding:30px 0}.page-heading{font-size:20px}.post-list{margin-left:0;list-style:none;display:block;flex-wrap:wrap;justify-content:flex-start}.post-list>li{flex-basis:50%}.post-meta{font-size:14px;color:#828282}.post-link{display:block;font-size:1em}.post-header,.post-footer{margin-bottom:30px}.cssi-post-title{font-size:42px;letter-spacing:-1px;line-height:1}@media screen and (max-width:800px){.cssi-post-title{font-size:36px}}.cssix-intro h1{font-size:24px;line-height:1}.cssix-intro h2{font-size:16px;line-height:1}.post-content{margin-bottom:30px}.post-content h2{font-size:32px}@media screen and (max-width:800px){.post-content h2{font-size:28px}}.post-content h3{font-size:26px}@media screen and (max-width:800px){.post-content h3{font-size:22px}}.post-content h4{font-size:20px}@media screen and (max-width:800px){.post-content h4{font-size:18px}}.PageNavigation{font-size:14px;display:block;width:auto;overflow:hidden}.PageNavigation a{display:block;width:50%;float:left;margin:1em 0}.PageNavigation .next{text-align:right}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#008080}.highlight .vg{color:#008080}.highlight .vi{color:#008080}.highlight .il{color:#099}</style><link href="http://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html" rel="canonical"><link href="http://cssicurriculum.withgoogle.com/feed.xml" rel="alternate" title="Google CSSI" type="application/rss+xml"></head><body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-cssix" data-gr-c-s-loaded="true"><div class="mdl-layout__container has-scrolling-header"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button has-drawer is-small-screen has-tabs is-upgraded" data-upgraded=",MaterialLayout"><header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary mdl-color-text--white"><div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div><div class="mdl-layout--large-screen-only mdl-layout__header-row"></div><div class="mdl-layout__header-row"><a href="https://cssicurriculum.withgoogle.com/" id="cssilogo_header"></a></div><div class="mdl-layout--large-screen-only mdl-layout__header-row"></div><div class="mdl-layout__tab-bar-container"><div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-left-button"><i class="material-icons">chevron_left</i></div><div class="mdl-layout--large-screen-only mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark mdl-color-text--white mdl-js-ripple-effect--ignore-events" data-upgraded=",MaterialRipple"><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/intro.html">Intro<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/command-line.html">Command Line<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/html.html">HTML &amp; CSS<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/javascript.html">JavaScript<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab is-active" href="https://cssicurriculum.withgoogle.com/python.html">Python<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/app-engine.html">AppEngine<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/project.html">Project Week<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/git.html">Git<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/resources.html">Resources<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a></div><div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-right-button"><i class="material-icons">chevron_right</i></div></div></header><div class="mdl-layout__drawer" aria-hidden="true"><span class="mdl-layout-title">CSSIx Modules</span><nav class="mdl-navigation"><a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/intro.html">Intro</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/command-line.html">Command Line</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/html.html">HTML &amp; CSS</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/javascript.html">JavaScript</a> <a class="mdl-navigation__link is-active" href="https://cssicurriculum.withgoogle.com/python.html">Python</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/app-engine.html">AppEngine</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/project.html">Project Week</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/git.html">Git</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/resources.html">Resources</a></nav></div><main class="mdl-layout__content cssi-main"><div class="mdl-grid"><div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div><div class="cssix-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col"><div class="post"><header class="post-header"><div><div class="PageNavigation"><a class="prev" href="https://cssicurriculum.withgoogle.com/python/python-javascript-frame.html">« Python and Javascript - A Quick Overview</a> <a class="next" href="https://cssicurriculum.withgoogle.com/python/make-a-short-story-lab.html">MadLibs Lab »</a></div></div></header><article class="post-content"><h1 id="python-basics-lecture-guide">Python Basics Lecture Guide</h1><h2 id="sequence">Sequence</h2><ol><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#first-program">First Program</a></li><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#variables">Variables</a></li><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#user-input">User Input</a></li><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#operators">Operators</a></li><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#data-types-and-type-conversions">Data Types and Type Conversions</a></li><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#conditionals">Conditionals</a></li><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#loops">Loops</a></li><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#string-formatting">String Formatting</a></li><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#functions">Functions</a></li></ol><h2 id="learning-objectives">Learning objectives</h2><ul><li>Master in Python the same principles covered in JavaScript.</li><li>Store data in Python variables.</li><li>Store data submitted by a user through the console in a variable.</li><li>Use mathematical operators to manipulate numerical data.</li><li>Convert between Python data types.</li><li>Use logical operators to write <code class="highlighter-rouge">if</code>-<code class="highlighter-rouge">elif</code>-<code class="highlighter-rouge">else</code> control flow.</li><li>Write <code class="highlighter-rouge">while</code> and <code class="highlighter-rouge">for</code> loops in Python.</li><li>Print strings from user data using concatenation and string formatting.</li><li>Write custom Python function definitions and call those functions.</li></ul><p>Most of what’s covered in this lesson mirrors some of the concepts covered in the JavaScript unit. Although Python cannot manipulate the DOM in the same way JavaScript can, the syntax of Python often feels a little more approachable than that of JavaScript.</p><p>Read on for examples of how to execute some of the most fundamental scripting tasks in Python.</p><p></p><h2 id="getting-started">Getting Started</h2><p>If you’re doing this work in the native OSX terminal, you’ll use the workflow to create and run scripts in terminal. Remember that Python scripts end in <code class="highlighter-rouge">.py</code>, so create a Python file with a command like <code class="highlighter-rouge">touch myfile.py</code>. Check to confirm that the file is indeed in your current working directory with <code class="highlighter-rouge">ls</code>. Execute a python script with the command <code class="highlighter-rouge">python myfile.py</code>.</p><p>Right now, the command <code class="highlighter-rouge">python myfile.py</code> won’t do anything. That’s because even though we’ve created a file, we still need to write some code <em>in</em> that file to be printed out to the terminal when it is run.</p><h2 id="first-program">First Program</h2><p>Similar to JavaScript’s <code class="highlighter-rouge">console.log()</code>, Python uses the function <code class="highlighter-rouge">print()</code>.</p><p>Any line starting with a <code class="highlighter-rouge">#</code> is considered a comment and not executed.\ Any text after a <code class="highlighter-rouge">#</code> is considered a comment as well, even if there is code before it.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span>
+<span class="c"># this is a comment!  It is ignored and not run.</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Bye world!"</span><span class="p">)</span>  <span class="c"># this is also a comment. "Bye world" is still printed!</span>
+</pre></td></tr></tbody></table></code></pre></div></div><h2 id="variables">Variables</h2><p>In Javascript, variables have to be first be declared with <code class="highlighter-rouge">var</code> or <code class="highlighter-rouge">let</code>/<code class="highlighter-rouge">const</code>.</p><p>Variables are defined in Python simply by assigning a value to a variable. Variable assignment is completed with an equal sign - assigning the value on the right hand side of the equal sign to the variable on the left.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">name</span> <span class="o">=</span> <span class="s">"John"</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Hi there,"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><h2 id="user-input">User Input</h2><p>Python uses the <code class="highlighter-rouge">raw_input()</code> function to pause execution to allow the user to type something in. The result is typically saved to a variable. The prompt that the user sees would go inside the parentheses, inside of quotes. See the example:</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">name</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">"Enter your name: "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Hi there, "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Note that a colon and a space is included in the prompt, as the user’s input begins immediately after the string on the same line. Run this program now to see how it works.</p><h2 id="operators">Operators</h2><h3 id="operators-on-numbers-integers-decimals-floats">Operators on Numbers (integers, decimals [floats])</h3><p>Addition, subtraction, multiplication, and division (<code class="highlighter-rouge">+</code>, <code class="highlighter-rouge">-</code>, <code class="highlighter-rouge">*</code>, and <code class="highlighter-rouge">/</code> respectively) do almost exactly what you would expect. There are also a few less familiar (but equally useful) operators - for now we’ll draw attention to just two of those:</p><p><code class="highlighter-rouge">**</code> - the power/exponent operator: the expression 2^5 (or two to the fifth power) is written as <code class="highlighter-rouge">2 ** 5</code>. <code class="highlighter-rouge">%</code> - Modulo - the remainder operator: <code class="highlighter-rouge">a % b</code> is the remainder of <code class="highlighter-rouge">a / b</code>.</p><p></p><h6 id="mini-challenges">Mini-challenges</h6><p>Predict the output of each of the following lines of Python code, and then run each one to test your predictions:</p><ul><li><code class="highlighter-rouge">print(100 + 10)</code></li><li><code class="highlighter-rouge">print(-100 - 10)</code></li><li><code class="highlighter-rouge">print(5 * 10)</code></li><li><code class="highlighter-rouge">print(5 ** 2)</code></li><li><code class="highlighter-rouge">print(25 / 5)</code></li><li><code class="highlighter-rouge">print(10 / 4)</code></li><li><code class="highlighter-rouge">print(10 % 4)</code></li><li><code class="highlighter-rouge">print(21 / 5)</code></li><li><code class="highlighter-rouge">print(21.0 / 5)</code></li><li><code class="highlighter-rouge">print(21 / 5.0)</code></li><li><code class="highlighter-rouge">print(3 + 4 * 5)</code></li></ul><h3 id="operators-on-strings-text">Operators on Strings (text)</h3><p>You can add strings together (note that it doesn’t add a space in automatically!):</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">"Howdy"</span> <span class="o">+</span> <span class="s">"there"</span><span class="p">)</span>  <span class="c"># prints 'howdythere'</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>You can also multiply strings by an integer:</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span><span class="s">"na "</span> <span class="o">*</span> <span class="mi">16</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"BATMAN!"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><h6 id="mini-challenges-1">Mini-challenges</h6><ul><li>Write a program that asks the user for a first name and then for a last name; then print out their full name.</li><li>Write a program that asks the user for a word, and print out the word 5 times.</li><li>Write a program that asks the user for a word, and prints out that word once for each letter in the word.</li></ul><p></p><h2 id="data-types-and-type-conversions">Data Types and Type Conversions</h2><p>Python, like JavaScript, represents data as <strong>strings</strong> or <strong>numbers</strong>. It also includes <strong>lists</strong>, the equivalent of JavaScript arrays, and <strong>dictionaries</strong>, the equivalent of JS Objects. We will learn how to use both in the next lessons.</p><p>We can tell what datatype something is by using the <code class="highlighter-rouge">type()</code> function.</p><p>For example:</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">user_input</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">"Enter anything: "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"You entered a "</span> <span class="o">+</span> <span class="nb">type</span><span class="p">(</span><span class="n">user_input</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Run this a few times and, and try entering numbers. It should always tell you that you’re entering a String. That’s because <code class="highlighter-rouge">raw_input()</code> always takes the user’s input as a string.</p><p>We can convert that string to another datatype by using the following conversion functions:</p><ul><li><code class="highlighter-rouge">int(x)</code> converts <code class="highlighter-rouge">x</code> (the value inside) to an integer (whole number)</li><li><code class="highlighter-rouge">float(x)</code> converts <code class="highlighter-rouge">x</code> (the value inside) to a float (decimal number)</li></ul><p>Write a program that takes in two integers and prints the sum. You should end up with something like this:</p><div class="answer_container"><div class="answer"><div></div><p></p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">"Enter number #1: "</span><span class="p">))</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">"Enter number #2: "</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><h6 id="mini-challenge">Mini-challenge:</h6><p>Try to print the result in a full sentence, like “the sum is _____”. Click to see hints if you get stuck, and an answer for a correct implementation.</p><p>Hint 1:</p><div class="answer_container"><div class="answer"><div></div>The following code should get you close with concatenation, but still has some errors.<p></p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">"Enter number #1: "</span><span class="p">))</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">"Enter number #2: "</span><span class="p">))</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"The sum is "</span> <span class="o">+</span> <span class="n">total</span><span class="p">)</span> <span class="c"># This code *almost* works, but doesn't quite.</span>
+<span class="c"># See if you can debug it by reading the error message.</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>Hint 2:</p><div class="answer_container"><div class="answer"><div></div>Strings cannot be mixed with integers, so we have to convert the number (integer) back to a string. Use the search tools available to you to figure out how to convert an integer to a string in Python.</div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>Answer:</p><div class="answer_container"><div class="answer"><div></div>Convert the total (which is an integer) to a string before concatenating and printing it by using the <code class="highlighter-rouge">str()</code> conversion function:<p></p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">"Enter number #1: "</span><span class="p">))</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">"Enter number #2: "</span><span class="p">))</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"The sum is "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><h6 id="mini-challenges-2">Mini-challenges</h6><ul><li>Write a program that takes in an age and reports the year a person was born.</li><li>Expand that program to account for whether or not the user’s birthday has already passed this year.</li><li>See if you can find a way to have your program dynamically figure out today’s date before you answer - that way this program will still work a year from now, when the numbers are different.</li></ul><h2 id="conditionals">Conditionals</h2><p>An if, else-if, else statement in Python might look like the following:</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">"Enter a number: "</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"That's a positive number!"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span> <span class="c"># Note that we use the one-word elision "elif", not "else if"</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"That's a negative number!"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Zero is neither positive nor negative"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Click to see the equivalent in JavaScript:</p><div class="answer_container"><div class="answer"><div></div><p></p><pre><code class="language-JavaScript">var num = parseInt(prompt("Enter a number"));
+if (num &gt; 0) {
+  console.log("That's a positive number!");
+} else if (num &lt; 0) {
+  console.log("That's a negative number!");
+} else {
+  console.log("Zero is neither positive nor negative");
+}
+</code></pre><p></p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>Some critical things to know about conditional operations in Python:</p><ul><li><code class="highlighter-rouge">elif</code> is equivalent to the <code class="highlighter-rouge">else if</code> of JavaScript.</li><li>The logical operators in Python are <code class="highlighter-rouge">and</code>, <code class="highlighter-rouge">or</code> and <code class="highlighter-rouge">not</code>, as opposed to JavaScript’s <code class="highlighter-rouge">&amp;&amp;</code>, <code class="highlighter-rouge">||</code> and <code class="highlighter-rouge">!</code>.</li><li>In Python, parentheses are not required around the condition.<ul><li>Parentheses are allowed, and will be executed exactly the same as in JavaScript, but typically only come into play if a developer is trying to adhere to a style guide’s <a href="http://google.github.io/styleguide/pyguide.html#32-line-length">character limit requirements</a>. In general, <a href="http://google.github.io/styleguide/pyguide.html#33-parentheses">Google’s guidance for parentheses in Python</a> is that they should be used sparingly.</li></ul></li><li>Instead of using <code class="highlighter-rouge">{}</code> to indicate code blocks, code blocks are instead determined by the <strong>level of indentation</strong> of each line of code.<ul><li>In JavaScript, indentation is not required to run code, but it is generally expected and does help make our code more readable.</li><li>In Python, indentation is <em>required</em>. It is the only way you can clarify when a code block is beginning, continuing, or ending. Indenting forwards means a code blocks is opening; indenting backwards (left) means a code block is closing.</li></ul></li><li>When comparing values, Python uses <code class="highlighter-rouge">==</code>, which is equivalent to JavaScript’s <code class="highlighter-rouge">===</code> operator. Click below for more detail on the variations between equality checks in these two languages:</li></ul><p></p><div class="answer_container"><div class="answer"><div></div><p></p><p>While it wasn’t explicitly covered in the JavaScript unit, JavaScript also has a <code class="highlighter-rouge">==</code> equality comparison operator, which you may have seen as you checked online references to solve bugs. However, JavaScript’s <code class="highlighter-rouge">==</code> isn’t the same as Python’s <code class="highlighter-rouge">==</code> operator.</p><p>Python’s <code class="highlighter-rouge">==</code> is more strict than the <code class="highlighter-rouge">==</code> in Javascript. JavaScript allows the comparison of a string and an integer <code class="highlighter-rouge">5 == "5"</code> to return true since the numerical values match, even though the types do not. Python comparisons are not so flexible. In Python, <code class="highlighter-rouge">5 == "5"</code> would return <em>False</em>.</p><p>In JavaScript, the type-converting <code class="highlighter-rouge">==</code> comparison also allows comparison between <code class="highlighter-rouge">null</code> and <code class="highlighter-rouge">undefined</code> to be true. This is the <em>most</em> useful application of JavaScript’s <code class="highlighter-rouge">==</code> comparison operator, and according to Google’s style guide, is the only occasion where the use of <code class="highlighter-rouge">==</code> is accepted. In all other situations, developers are encouraged to use the <code class="highlighter-rouge">===</code> strict comparison.</p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>An example of indentation at work:</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="n">age</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You can buy lottery tickets!"</span><span class="p">)</span>
+    <span class="c"># This next if statement is still part of our initial if code block.</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"You can also rent a car!"</span><span class="p">)</span>
+    <span class="c"># Since we've indented backwards, we're exiting the `if x &gt; 25` block.</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"And you can get your own credit card!"</span><span class="p">)</span>
+<span class="c"># Since we've indented backwards again, we're exiting the `if x &gt; 18` block.</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"End program."</span><span class="p">)</span>
+<span class="c"># Code not indented at all is sometimes called "top-level code".</span>
+</pre></td></tr></tbody></table></code></pre></div></div><h2 id="loops">Loops</h2><h3 id="for-loops---strings"><code class="highlighter-rouge">for</code> loops - strings</h3><p>Python <code class="highlighter-rouge">for</code> loops work a little differently than JavaScript <code class="highlighter-rouge">for</code> loops. Python <code class="highlighter-rouge">for</code> loops always loop through an iterable, such as a list (equivalent of a JavaScript array) or a string (which can be seen as an array or list of characters).</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">string</span> <span class="o">=</span> <span class="s">"hello there"</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">letter</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>This prints each letter in capitals, one per line, by looping through the string.</p><p>NOTE: The iteration variable <code class="highlighter-rouge">letter</code> is never explicitly defined before starting the <code class="highlighter-rouge">for-in</code> loop, but the loop still runs as expected. Click to learn why the loop runs without needing more information.</p><div class="answer_container"><div class="answer"><div></div>Bear in mind that a string is called a “string” because it a is <em>string of characters</em>. Python is built on the assumption that you might want to do something for every character in that string.<p></p><p>That means that this loop will run one time for each character in the string, and the iteration variable will point to each letter in turn: the first time the loop runs, <code class="highlighter-rouge">letter</code> will be <code class="highlighter-rouge">"h"</code>, the second time, <code class="highlighter-rouge">letter</code> will be <code class="highlighter-rouge">"e"</code>, the third time it will be <code class="highlighter-rouge">"l"</code>, and so on until each character in <code class="highlighter-rouge">"hello there"</code> has taken a turn as the value of <code class="highlighter-rouge">letter</code>.</p><p>The word <code class="highlighter-rouge">letter</code> itself is arbitrary, and could be replaced with another word like <code class="highlighter-rouge">char</code> or <code class="highlighter-rouge">c</code>. You can use whatever term you want for the iteration variable, but it’s best practice to have it somewhat clearly represent the type of information that will be stored there each time the <code class="highlighter-rouge">for</code> loop runs, which in the case of strings is a letter or character.</p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>Click for a JavaScript comparison.</p><div class="answer_container"><div class="answer"><div></div>In JavaScript, we would mostly write a <code class="highlighter-rouge">for</code> loop over a range of numbers. For example, to count from 0 to 4:<p></p><pre><code class="language-JavaScript">for (let i=0; i&lt;5; i++) {
+  console.log(i);
+}
+</code></pre><p>Based on this example, you could figure out out how to iterate over the characters in a JavaScript string. Take a few minutes and try it. Is it harder or easier than iterating over the characters in a Python string?</p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><h3 id="for-loops---lists"><code class="highlighter-rouge">for</code> loops - lists</h3><p>For loops can also iterate over a Python list - this is a data structure that isn’t covered until the next lesson, so there’s no need to learn it now. However, if you’re interested in learning more ways to use <code class="highlighter-rouge">for</code> loops in Python, click to see how looping over a list can work.</p><div class="answer_container"><div class="answer"><div></div><p></p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">books</span> <span class="o">=</span> <span class="p">[</span><span class="s">"The Hobbit"</span><span class="p">,</span> <span class="s">"The Hunger Games"</span><span class="p">,</span> <span class="s">"The House on Mango Street"</span><span class="p">,</span> <span class="s">"Native Son"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">books</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"I really enjoyed reading "</span> <span class="o">+</span> <span class="n">book</span> <span class="o">+</span> <span class="s">" this year."</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>NOTE: Just as above, the singular word <code class="highlighter-rouge">book</code> is used as our iteration variable, but is never explicitly defined. In the same way that a string is a collection of characters, a list is a collection of things - in this case, a collection of book titles stored as strings.</p><p>So even though <code class="highlighter-rouge">book</code> was never explicitly defined, it becomes our iteration variable as part of the <code class="highlighter-rouge">for-in</code> syntax.</p><p>You’ll notice that the list was called <code class="highlighter-rouge">books</code> but the iteration variable doesn’t have to be the singular version of the array name, <code class="highlighter-rouge">book</code>. You could just as easily use <code class="highlighter-rouge">for title in books:</code> or <code class="highlighter-rouge">for x in books:</code>. You could even use <code class="highlighter-rouge">for pineapple in book:</code> but the ridiculousness of that variable name should be obvious. You’ll notice that the more abstract the iteration variable becomes, the harder it becomes to read (and ultimately debug) our own code.</p><p>For that reason, even though it’s not a hard and fast rule, the convention of naming our iteration variable something that can very specifically stand in for each value contained in the list. In this case, <code class="highlighter-rouge">book</code> is probably the best choice.</p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><h3 id="for-loops---range"><code class="highlighter-rouge">for</code> loops - range()</h3><p>In Python, you may wish to do something a specific number of times. The <code class="highlighter-rouge">range()</code> function will generate a list of numbers that you can then iterate over in a <code class="highlighter-rouge">for</code> loop.</p><p>Examples:</p><ul><li><code class="highlighter-rouge">range(5)</code> will give you a list of numbers <code class="highlighter-rouge">[0,1,2,3,4]</code></li><li><code class="highlighter-rouge">range(5,10)</code> will give you a <code class="highlighter-rouge">[5,6,7,8,9]</code></li><li><code class="highlighter-rouge">range(5,1,-1)</code> will give you <code class="highlighter-rouge">[5,4,3,2]</code></li></ul><p>We can use this in a <code class="highlighter-rouge">for</code> loop to do something a specific number of times:</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>This same goal - doing something a specific number of times - can be accomplished in JavaScript as well, though the syntax looks a little more complicated. Click to see the same example in JavaScript.</p><div class="answer_container"><div class="answer"><div></div><p></p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><h3 id="while-loops"><code class="highlighter-rouge">while</code> loops</h3><p>Looping in Python can also be accomplished with <code class="highlighter-rouge">while</code> loops, which execute as over and over as long as a given condition is true.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c"># This loop counts 1 to 5.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="c"># The variable x is incremented by 1 each time.</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Python <code class="highlighter-rouge">while</code> loops are a powerful way to repeat code in ways that <code class="highlighter-rouge">for</code> loops cannot. For example, you can use the expression <code class="highlighter-rouge">while True:</code> to repeat code endlessly.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c"># This loop will run forever, because the condition is literally always True.</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Loop running."</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><h2 id="string-formatting">String Formatting</h2><p></p><p>To understand when this next concept might be most useful, try writing code that stores your name and three friends’ names in variables, and then prints out a single sentence explaining who you are and who your friends are. Click below to see an example when you’re ready.</p><p></p><div class="answer_container"><div class="answer"><div></div><p></p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="n">my_name</span> <span class="o">=</span> <span class="s">"Bob"</span>
+<span class="n">friend1</span> <span class="o">=</span> <span class="s">"Alice"</span>
+<span class="n">friend2</span> <span class="o">=</span> <span class="s">"John"</span>
+<span class="n">friend3</span> <span class="o">=</span> <span class="s">"Mallory"</span>
+
+<span class="k">print</span><span class="p">(</span>
+  <span class="s">"My name is "</span> <span class="o">+</span> <span class="n">my_name</span> <span class="o">+</span> <span class="s">" and my friends are "</span> <span class="o">+</span>
+  <span class="n">friend1</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">friend2</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">friend3</span> <span class="o">+</span> <span class="s">"."</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>This prints:</p><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>My name is Bob and my friends are Alice, John, and Mallory.
+</pre></td></tr></tbody></table></code></pre></div></div><p>Even though the result is simple, printing lots of variables in a single line can get really messy with constant closing quotes and plus signs.</p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>We can make this type of task easier by using String formatting - check out this alternative:</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="k">print</span><span class="p">(</span>
+  <span class="s">"My name is </span><span class="si">%</span><span class="s">s and my friends are </span><span class="si">%</span><span class="s">s, </span><span class="si">%</span><span class="s">s, and </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span>
+  <span class="p">(</span><span class="n">my_name</span><span class="p">,</span> <span class="n">friend1</span><span class="p">,</span> <span class="n">friend2</span><span class="p">,</span> <span class="n">friend3</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>The <code class="highlighter-rouge">%s</code> is a placeholder for a value. After the string (quotes end), put a <code class="highlighter-rouge">%</code> followed by the values to insert, in order, in parentheses. If it’s just one value, you can omit the parentheses. For example:</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">my_name</span> <span class="o">=</span> <span class="s">"Bob"</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"My name is </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="n">my_name</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><h3 id="mixing-types">Mixing types</h3><p>To see another example of when string formatting can be most helpful, try writing code that stores your name as a string in a variable called <code class="highlighter-rouge">name</code>, and your age as an integer in a variable called <code class="highlighter-rouge">age</code>. Then print out a sentence indicating who you are and how old you are. Try doing this twice: once using concatenation and once using string formatting. Click below when you’re ready or if you get stuck to see a solution:</p><div class="answer_container"><div class="answer"><div></div>You may have gotten a <code class="highlighter-rouge">TypeError: cannot concatenate 'str' and 'int' objects</code> message on your attempt at concatenation. If you handled it on your own, great job! But if not, it’s a pretty simple fix.<p></p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="n">name</span> <span class="o">=</span> <span class="s">"Marina"</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">19</span>
+
+<span class="c"># Using concatenation, you must convert the integer to a string:</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"My name is "</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">" and I'm "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="s">" years old."</span><span class="p">)</span>
+
+<span class="c"># Using string formatting, the type is converted automatically:</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"My name is </span><span class="si">%</span><span class="s">s and I'm </span><span class="si">%</span><span class="s">s years old."</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>You also don’t have to convert values from integers to strings to use them in string formatting, so string formatting can be very useful when mixing types:</p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p></p><h2 id="functions">Functions</h2><p>Functions in Python are defined using the <code class="highlighter-rouge">def</code> keyword.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">greetAgent</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Bond. James Bond."</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>You call (run) functions by using their name, followed by parentheses.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">greetAgent</span><span class="p">()</span>
+<span class="c"># This calls the function we defined and prints `Bond. James Bond.`</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Click to see how this same function would be defined and called in JavaScript:</p><div class="answer_container"><div class="answer"><div></div><p></p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c1">// Function definition:</span>
+<span class="kd">const</span> <span class="nx">greetAgent</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Bond. James Bond."</span><span class="p">)</span>
+<span class="p">};</span>
+
+<span class="c1">// Function call:</span>
+<span class="nx">greetAgent</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>The parentheses are required, even if they are empty. You can pass data to the function through the parentheses - these are called <strong>arguments</strong>.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="c"># the greetAgent function expects two pieces of data to be passed to it:</span>
+<span class="c">#   A value that gets saved into `first_name`, and</span>
+<span class="c">#   a value that gets saved into `last_name`.</span>
+
+<span class="k">def</span> <span class="nf">greetAgent</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">s. </span><span class="si">%</span><span class="s">s </span><span class="si">%</span><span class="s">s."</span> <span class="o">%</span> <span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Call it with:</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c"># These values must be provided in the order they were defined.</span>
+<span class="c"># So we know that "James" will be the `first_name`, and "Bond" the `last_name`</span>
+<span class="n">greetAgent</span><span class="p">(</span><span class="s">"James"</span><span class="p">,</span> <span class="s">"Bond"</span><span class="p">)</span>
+<span class="c"># As before, the beauty here is that we can reuse the function with other data.</span>
+<span class="n">greetAgent</span><span class="p">(</span><span class="s">"Beyonce"</span><span class="p">,</span> <span class="s">"Knowles"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Click to see the same function defined in JavaScript:</p><div class="answer_container"><div class="answer"><div></div><p></p><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="c1">// Function definition:</span>
+<span class="kd">const</span> <span class="nx">greetAgent</span> <span class="o">=</span> <span class="p">(</span><span class="nx">first_name</span><span class="p">,</span> <span class="nx">last_name</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">last_name</span><span class="p">}</span><span class="s2">. </span><span class="p">${</span><span class="nx">first_name</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">last_name</span><span class="p">}</span><span class="s2">.`</span><span class="p">)</span>
+<span class="p">};</span>
+
+<span class="c1">// Function call:</span>
+<span class="nx">greetAgent</span><span class="p">(</span><span class="s2">"James"</span><span class="p">,</span> <span class="s2">"Bond"</span><span class="p">);</span>
+<span class="nx">greetAgent</span><span class="p">(</span><span class="s2">"Beyonce"</span><span class="p">,</span> <span class="s2">"Knowles"</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>Note that we pass 2 values because the function <em>expects</em> to be passed 2 values. Passing in the wrong number of values is is the most common error you’re likely to encounter when you first start working with your own custom functions, so reference your function definition if you’re struggling to see why a function call is throwing an error.</p><p>Functions can also return values to where it was called by using the <code class="highlighter-rouge">return</code> keyword.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">createAgentGreeting</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">"</span><span class="si">%</span><span class="s">s. </span><span class="si">%</span><span class="s">s </span><span class="si">%</span><span class="s">s."</span> <span class="o">%</span> <span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Now if you call <code class="highlighter-rouge">createAgentGreeting("James","Bond")</code> - nothing happens! That’s because <code class="highlighter-rouge">return</code> doesn’t actually print anything. The function call itself (in this case, <code class="highlighter-rouge">createAgentGreeting("James","Bond")</code>) is replaced with the return value.</p><p>We can save it in a variable or we can print the result directly if we don’t expect to need the data later.</p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c"># Method 1: store the return of the function in a variable.</span>
+<span class="n">greeting</span> <span class="o">=</span> <span class="n">createAgentGreeting</span><span class="p">(</span><span class="s">"John"</span><span class="p">,</span> <span class="s">"Smith"</span><span class="p">)</span>
+<span class="c"># Print the contents of that variable - we can use it later in our program.</span>
+<span class="k">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+
+<span class="c"># Method 2: print the return value directly, without saving the data.</span>
+<span class="k">print</span><span class="p">(</span><span class="n">createAgentGreeting</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">,</span> <span class="s">"The Builder"</span><span class="p">))</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p>Return values are especially useful when you might not want to print the result, or you need to perform some kind of calculation and do something with the result later on. Printing is useful when you’re hunting down a bug, working with a really small dataset, or building a command line application where a user will interact with your product directly in their terminal, but there may be times when excessive printing clutters up your console in an unhelpful way.</p><p>Return is a much more versatile result for a function for a number of reasons that will become increasingly clear the more code you write. In general, you’ll find it better to return values from your functions, store those values when you write the function call, and then print those variables if you need to check the return value of a function.</p></article><footer class="post-footer"><hr><div class="PageNavigation"><a class="prev" href="https://cssicurriculum.withgoogle.com/python/python-javascript-frame.html">« Python and Javascript - A Quick Overview</a> <a class="next" href="https://cssicurriculum.withgoogle.com/python/make-a-short-story-lab.html">MadLibs Lab »</a></div></footer></div></div></div></main><footer class="mdl-mini-footer section"><div class="mdl-mini-footer__left-section"><div class="lockup va"><span class="lockup-logo lockup-dark"></span></div></div><div class="mdl-mini-footer__right-section"><ul class="mdl-mini-footer__link-list"><li><span id="site_label">CSSI - Atlanta</span></li><li>--</li><li><a href="https://www.google.com/intl/en/about/">About Google</a></li><li><a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a></li><li><a href="https://www.google.com/intl/en/policies/terms/">Terms</a></li><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#" id="signout_link">Logout</a></li><li><a href="https://cssicurriculum.withgoogle.com/python/lecture-guides/01-python-basics.html#" id="forgetme_link">Forget Me</a></li></ul></div><script src="./Python Basics Lecture Guide_files/firebase-app.js.download"></script><script src="./Python Basics Lecture Guide_files/firebase-auth.js.download"></script><script src="./Python Basics Lecture Guide_files/firebaseui.js.download"></script><link href="./Python Basics Lecture Guide_files/firebaseui.css" rel="stylesheet" type="text/css"><script>
+  function getCookie(name) {
+    let dc = document.cookie;
+    let prefix = name + "=";
+    let begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+      begin = dc.indexOf(prefix);
+      if (begin != 0) return null;
+    }
+    begin += 2;
+    let end = document.cookie.indexOf(";", begin);
+    if (end == -1) {
+      end = dc.length;
+    }
+    return decodeURI(dc.substring(begin + prefix.length, end));
+  }
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD_NpvZGlms1zebBgfE4RZPCim5irYGbG4",
+    authDomain: "cssi-curriculum.firebaseapp.com",
+    databaseURL: "https://cssi-curriculum.firebaseio.com",
+    projectId: "cssi-curriculum",
+    storageBucket: "cssi-curriculum.appspot.com",
+    messagingSenderId: "443846997353"
+  };
+  // Firebase log-in widget
+  function configureFirebaseLoginWidget() {
+    let uiConfig = {
+      signInSuccessUrl: '/',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        {
+            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            // Whether the display name should be displayed in the Sign Up page.
+            requireDisplayName: false,
+        },
+      ],
+      callbacks: {
+        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+          let user = authResult.user;
+          let credential = authResult.credential;
+          let isNewUser = authResult.additionalUserInfo.isNewUser;
+          let providerId = authResult.additionalUserInfo.providerId;
+          let operationType = authResult.operationType;
+          // Do something with the returned AuthResult.
+          // Return type determines whether we continue the redirect automatically
+          // or whether we leave that to developer to handle.
+          return true;
+        },
+        signInFailure: function(error) {
+          // Some unrecoverable error occurred during sign-in.
+          // Return a promise when error handling is completed and FirebaseUI
+          // will reset, clearing any UI. This commonly occurs for error code
+          // 'firebaseui/anonymous-upgrade-merge-conflict' when merge conflict
+          // occurs. Check below for more details on this.
+          return handleUIError(error);
+        },
+      },
+      // Terms of service url
+      'tosUrl': 'https://www.google.com/intl/en/policies/terms/',
+    };
+
+    let user = firebase.auth().currentUser;
+    if (!user && document.getElementById('firebaseui-auth-container')) {
+      let ui = new firebaseui.auth.AuthUI(firebase.auth());
+      ui.start('#firebaseui-auth-container', uiConfig);
+    }
+  }
+
+  function updateUserToken(user) {
+    let oldCookie = getCookie('idToken');
+    if (user) {
+      let refresh_token = getCookie('needRefreshToken');
+      user.getIdToken(refresh_token == 'true').then(function(idToken) {
+        document.cookie = "idToken=" + idToken + "; path=/";
+        if (!oldCookie) {
+          location.reload();
+        }
+      });
+    } else {
+      console.log("Removing auth token");
+      document.cookie = "idToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+      if (oldCookie) {
+        location.reload();
+      }
+    }
+  }
+
+  function configureFirebaseLogin() {
+    firebase.initializeApp(config);
+    firebase.auth().onAuthStateChanged(updateUserToken);
+    firebase.auth().onIdTokenChanged(function() {console.log("token changed");});
+  }
+
+  function signOut() {
+    firebase.auth().signOut();
+    window.location = "/";
+    return false;
+  }
+
+  function forgetMe() {
+    let user = firebase.auth().currentUser;
+    user.delete().then(function() {
+      console.log("User deleted");
+    }).catch(function(error) {
+      console.log("Error deleting the user " + error);
+    });
+    firebase.auth().signOut();
+    window.location = "/";
+    return false;
+  }
+
+  function sendVerificationEmail() {
+    let user = firebase.auth().currentUser;
+    if (user && !user.emailVerified) {
+      user.sendEmailVerification().then(function() {
+          console.log("Verification email sent.");
+        }).catch(function(error) {
+          console.log("An error happened while sending the verification email.");
+        });
+    } else if (user) {
+      console.log("Email already verified");
+    } else {
+      console.log("User not logged in");
+    }
+    console.log("Removing auth token");
+    document.cookie = "idToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.querySelector('#send_verification_button').style.display = 'None';
+    document.querySelector('#verification_sent').style.display = 'block';
+  }
+
+  function checkAndRestoreCookie(){
+    let user = firebase.auth().currentUser;
+  }
+
+  function showAnswer(event) {
+    let show_answer_button = event.currentTarget;
+    let answer_container = show_answer_button.parentElement;
+    toggleAnswer(answer_container, true);
+  }
+
+  function hideAnswer(event) {
+    let show_answer_button = event.currentTarget;
+    let answer_container = show_answer_button.parentElement;
+    toggleAnswer(answer_container, false);
+  }
+
+  function toggleAnswer(container, visible) {
+    let answer = container.querySelector('.answer');
+    answer.style.display = visible ? 'block' : 'none';
+    let hide_answer_button = container.querySelector('.hide_answer');
+    hide_answer_button.style.display = visible ? 'block' : 'none';
+    let show_answer_button = container.querySelector('.show_answer');
+    show_answer_button.style.display = visible ? 'none' : 'block';
+  }
+
+  function toggleStudentViewCookie(event) {
+    const new_value = event.target.checked;
+    document.cookie = "student_view=" + new_value + ";path=/";
+    location.reload();
+  }
+
+  window.addEventListener('load', function() {
+    configureFirebaseLogin();
+    configureFirebaseLoginWidget();
+    //checkAndRestoreCookie();
+    let signout_link = document.querySelector('#signout_link');
+    if (signout_link) {
+      signout_link.onclick = signOut;
+    }
+    let forgetme_link = document.querySelector('#forgetme_link');
+    if (forgetme_link) {
+      forgetme_link.onclick = forgetMe;
+    }
+    let email_verification_btn = document.querySelector('#send_verification_button');
+    if (email_verification_btn) {
+      email_verification_btn.onclick = sendVerificationEmail;
+    }
+    let show_answer_btns = document.querySelectorAll('.show_answer');
+    show_answer_btns.forEach( function(element) {
+      element.onclick = showAnswer;
+    });
+    let hide_answer_btns = document.querySelectorAll('.hide_answer');
+    hide_answer_btns.forEach( function(element) {
+      element.onclick = hideAnswer;
+    });
+    // Student View checkbox not available on all pages, if present,
+    // it can be used to override the user role, so that instructors can view
+    // content as students.
+    let student_view_flag = document.querySelector('#chk_student_view');
+    if (student_view_flag) {
+      student_view_flag.checked = JSON.parse(getCookie('student_view'));
+      student_view_flag.onclick = toggleStudentViewCookie;
+    }
+    // Select the proper element in the site selection view based on the
+    // existing cookies.
+    let selected_site = getCookie('site');
+    let site_selector_list = document.querySelectorAll('.site_radio');
+    [].forEach.call(site_selector_list, (element) => {
+      element.addEventListener('click', () => {
+        console.log('Clicked ' + element.value);
+        document.cookie = "site=" + element.value + ";path=/";
+        document.querySelector('#site_label').innerText = element.dataset.label;
+      });
+    });
+    if (selected_site && site_selector_list.length > 0) {
+      [].forEach.call(site_selector_list, (element) => {
+        console.log(selected_site);
+        if (element.value === selected_site) {
+          element.checked = true;
+        } else {
+          element.checked = false;
+        }
+      });
+      console.log(site_selector_list);
+    }
+
+  })
+</script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101261509-1', 'auto');
+  ga('send', 'pageview');
+</script></footer><div class="mdl-layout__obfuscator"></div></div></div></body></html>

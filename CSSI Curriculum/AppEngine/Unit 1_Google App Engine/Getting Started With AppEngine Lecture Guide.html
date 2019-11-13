@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://cssicurriculum.withgoogle.com/mvc-appEngine/appEngine-setup.html -->
+<html class="gr__cssicurriculum_withgoogle_com mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width, initial-scale=1" name="viewport"><title>Getting Started With AppEngine Lecture Guide</title><meta content="
+          
+              Getting Started With AppEngine Lecture Guide
+          " name="description"><link href="https://cssicurriculum.withgoogle.com/favicon.ico" rel="shortcut icon"><link href="./Getting Started With AppEngine Lecture Guide_files/material.indigo-yellow.min.css" rel="stylesheet"><link href="./Getting Started With AppEngine Lecture Guide_files/icon" rel="stylesheet"><script async="" src="./Getting Started With AppEngine Lecture Guide_files/analytics.js.download"></script><script defer="" src="./Getting Started With AppEngine Lecture Guide_files/material.min.js.download"></script><style>html,body{font-family:'Roboto','Helvetica',sans-serif;margin:0;padding:0}#verification_sent{display:None}.cssix-intro.mdl-card{width:99%;margin-bottom:2em}.cssix-intro.mdl-card>.mdl-card__supporting_text{padding:1em}.mdl-layout__header-row h3 a{color:white;text-decoration:none}#cssilogo_header{content:url('/cssilogo.png');width:80%}.admin_nav_link{color:red}.mdl-cssix .mdl-layout__header-row{padding-left:40px}.mdl-cssix .mdl-layout.is-small-screen .mdl-layout__header-row h3{font-size:inherit;padding-left:12px}.mdl-cssix .mdl-layout__tab-bar-button{display:none}.mdl-cssix .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button{display:none}.mdl-cssix .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,.mdl-cssix .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container{overflow:visible}.cssi-main{overflow-x:visible!important;overflow-y:visible!important;overflow:visible!important}.mdl-cssix .mdl-layout__tab-bar-container{height:64px}.mdl-cssix .mdl-layout__tab-bar{padding:0;padding-left:16px;box-sizing:border-box;height:100%;width:100%}.mdl-cssix .mdl-layout__tab-bar .mdl-layout__tab{height:64px;line-height:64px;color:white}.mdl-cssix .mdl-layout__tab-bar .mdl-layout__tab.is-active::after{height:4px}.mdl-cssix main>.mdl-layout__tab-panel{padding:8px;padding-top:48px}.mdl-layout__tab#header_logout{background-color:red}.mdl-cssix .mdl-card{height:auto;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.mdl-cssix .mdl-card>*{height:auto}.mdl-cssix .mdl-card .mdl-card__supporting-text{margin:40px;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;padding:0;color:inherit;width:calc(100% - 80px)}.mdl-cssix .mdl-card__supporting-text h4{margin-top:0;margin-bottom:20px}.mdl-cssix .mdl-card__actions{margin:0;padding:4px 40px;color:inherit}.mdl-cssix .mdl-card__actions a{color:#00BCD4;margin:0}.mdl-cssix .mdl-card__actions a:hover,.mdl-cssix .mdl-card__actions a:active{color:inherit;background-color:transparent}.mdl-cssix .mdl-card__supporting-text+.mdl-card__actions{border-top:1px solid rgba(0,0,0,0.12)}.mdl-cssix #add{position:absolute;right:40px;top:36px;z-index:999}.mdl-list__item{min-height:.4em;padding:.3em}.material-icons.md-18{font-size:18px}.material-icons.md-24{font-size:24px}.material-icons.md-36{font-size:36px}.material-icons.md-48{font-size:48px}.post-list .toc_icon{vertical-align:middle;margin:.1em 1em}.mdl-cssix .mdl-layout__content section:not(:last-of-type){position:relative;margin-bottom:48px}.mdl-cssix section.section--center{max-width:860px}.mdl-cssix #features section.section--center{max-width:620px}.mdl-cssix section>header{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}.mdl-cssix section>.section__play-btn{min-height:200px}.mdl-cssix section>header>.material-icons{font-size:3rem}.mdl-cssix section>button{position:absolute;z-index:99;top:8px;right:8px}.mdl-cssix section .section__circle{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;-webkit-flex-shrink:1;-ms-flex-negative:1;flex-shrink:1}.mdl-cssix section .section__text{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;padding-top:8px}.mdl-cssix section .section__text h5{font-size:inherit;margin:0;margin-bottom:.5em}.mdl-cssix section .section__text a{text-decoration:none}.mdl-cssix section .section__circle-container>.section__circle-container__circle{width:64px;height:64px;border-radius:32px;margin:8px 0}.mdl-cssix section.section--footer .section__circle--big{width:100px;height:100px;border-radius:50px;margin:8px 32px}.mdl-cssix .is-small-screen section.section--footer .section__circle--big{width:50px;height:50px;border-radius:25px;margin:8px 16px}.mdl-cssix section.section--footer{padding:64px 0;margin:0 -8px -8px -8px}.mdl-cssix section.section--center .section__text:not(:last-child){border-bottom:1px solid rgba(0,0,0,.13)}.mdl-cssix .mdl-card .mdl-card__supporting-text>h3:first-child{margin-bottom:24px}.mdl-cssix .mdl-layout__tab-panel:not(#overview){background-color:white}.mdl-cssix #features section{margin-bottom:72px}.mdl-cssix #features h4,#features h5{margin-bottom:16px}.mdl-cssix .toc{border-left:4px solid #C1EEF4;margin:24px;padding:0;padding-left:8px;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.mdl-cssix .toc h4{font-size:.9rem;margin-top:0}.mdl-cssix .toc a{color:#4DD0E1;text-decoration:none;font-size:16px;line-height:28px;display:block}.mdl-cssix .mdl-menu__container{z-index:99}.cssix-content{border-radius:2px;padding:80px 56px;margin-bottom:16px}.is-small-screen .cssix-content{padding:0 8px 16px 12px}.cssix-content a{color:#03a9f4!important}div.instructor{border:2px solid red;border-radius:12px;padding:10px}div.instructor::before{content:"Instructor Notes(The students will not see this content):";display:block;color:red;font-weight:bold}a.instructor-notes-link{color:green!important}div.unpublished{border:2px solid green;border-radius:12px;padding:10px;background-color:#deffd1}div.unpublished::before{content:"This content is not released to students yet";color:red;font-weight:bold}a.unpublished-link{color:red!important}a.next{float:right}.post-content img{width:50%;display:block;margin:auto}.post-content img.large_img{width:80%;display:block;margin:auto}.is-small-screen .mdl-layout__tab-bar-container{display:none}.mdl-layout.is-upgraded .mdl-layout__tab.is-active{color:yellow;font-weight:bold}.mdl-layout__tab.admin_link{background-color:#c71414}.mdl-layout__header .mdl-layout__drawer-button{color:yellow!important}. .mdl-mini-footer{border-top:1px solid #ccc;background-color:inherit!important;padding:8px 16px}footer .lockup{padding-left:15px;padding-top:10px}.lockup-logo,.lockup-text{display:inline-block}.va{vertical-align:middle;line-height:0}.lockup-logo{width:74px;height:24px;background-image:url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png);background-size:74px 24px}.lockup-logo.lockup-dark{background-image:url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_dark_color_74x24dp.png);opacity:.54}@media(max-width:760px){footer .lockup{padding-top:0}}.answer{display:none;border:2px solid green;border-radius:12px;padding:1em}.hide_answer.mdl-button.mdl-js-button{display:none;!important}body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,dl,dd,ol,ul,figure{margin:0;padding:0}body{font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:300;color:#111;background-color:yellow;-webkit-text-size-adjust:100%}h1,h2,h3,h4,h5,h6,p,blockquote,pre,ul,ol,dl,figure,.highlight{margin-bottom:15px}img{max-width:100%;vertical-align:middle;display:block}figure>img{display:block}figcaption{font-size:14px}ul,ol{margin-left:30px}li>ul,li>ol{margin-bottom:0}h1,h2,h3,h4,h5,h6{font-weight:300}a{color:#2a7ae2;text-decoration:none}a:visited{color:#1756a9}a:hover{color:#111;text-decoration:underline}blockquote{color:#828282;border-left:4px solid #e8e8e8;padding-left:15px;font-size:18px;letter-spacing:-1px;font-style:italic}blockquote>:last-child{margin-bottom:0}pre,code{font-size:15px;border:1px solid #e8e8e8;border-radius:3px;background-color:#eef}code{padding:1px 5px}pre{padding:8px 12px;overflow-x:scroll}pre>code{border:0;padding-right:0;padding-left:0}.wrapper{max-width:-webkit-calc(800px -(30px * 2));max-width:calc(800px -(30px * 2));margin-right:auto;margin-left:auto;padding-right:30px;padding-left:30px}@media screen and (max-width:800px){.wrapper{max-width:-webkit-calc(800px -(30px));max-width:calc(800px -(30px));padding-right:15px;padding-left:15px}}.wrapper:after,.footer-col-wrapper:after{content:"";display:table;clear:both}.icon>svg{display:inline-block;width:16px;height:16px;vertical-align:middle}.icon>svg path{fill:#828282}.site-header{border-top:5px solid #424242;border-bottom:1px solid #e8e8e8;min-height:56px;position:relative}.site-title{font-size:26px;line-height:56px;letter-spacing:-1px;margin-bottom:0;float:left}.site-title,.site-title:visited{color:#424242}.sidebar-nav{float:left;border-right:1px solid #e8e8e8}.site-nav{float:right;line-height:56px}.site-nav .menu-icon{display:none}.site-nav .page-link{color:#111;line-height:1.5}.site-nav .page-link:not(:first-child){margin-left:20px}@media screen and (max-width:600px){.site-nav{position:absolute;top:9px;right:30px;background-color:yellow;border:1px solid #e8e8e8;border-radius:5px;text-align:right}.site-nav .menu-icon{display:block;float:right;width:36px;height:26px;line-height:0;padding-top:10px;text-align:center}.site-nav .menu-icon>svg{width:18px;height:15px}.site-nav .menu-icon>svg path{fill:#424242}.site-nav .trigger{clear:both;display:none}.site-nav:hover .trigger{display:block;padding-bottom:5px}.site-nav .page-link{display:block;padding:5px 10px}}.site-footer{border-top:1px solid #e8e8e8;padding:30px 0}.footer-heading{font-size:18px;margin-bottom:15px}.contact-list,.social-media-list{list-style:none;margin-left:0}.footer-col-wrapper{font-size:15px;color:#828282;margin-left:-15px}.footer-col{float:left;margin-bottom:15px;padding-left:15px}.footer-col-1{width:-webkit-calc(35% -(30px / 2));width:calc(35% -(30px / 2))}.footer-col-2{width:-webkit-calc(20% -(30px / 2));width:calc(20% -(30px / 2))}.footer-col-3{width:-webkit-calc(45% -(30px / 2));width:calc(45% -(30px / 2))}@media screen and (max-width:800px){.footer-col-1,.footer-col-2{width:-webkit-calc(50% -(30px / 2));width:calc(50% -(30px / 2))}.footer-col-3{width:-webkit-calc(100% -(30px / 2));width:calc(100% -(30px / 2))}}@media screen and (max-width:600px){.footer-col{float:none;width:-webkit-calc(100% -(30px / 2));width:calc(100% -(30px / 2))}}.page-content{padding:30px 0}.page-heading{font-size:20px}.post-list{margin-left:0;list-style:none;display:block;flex-wrap:wrap;justify-content:flex-start}.post-list>li{flex-basis:50%}.post-meta{font-size:14px;color:#828282}.post-link{display:block;font-size:1em}.post-header,.post-footer{margin-bottom:30px}.cssi-post-title{font-size:42px;letter-spacing:-1px;line-height:1}@media screen and (max-width:800px){.cssi-post-title{font-size:36px}}.cssix-intro h1{font-size:24px;line-height:1}.cssix-intro h2{font-size:16px;line-height:1}.post-content{margin-bottom:30px}.post-content h2{font-size:32px}@media screen and (max-width:800px){.post-content h2{font-size:28px}}.post-content h3{font-size:26px}@media screen and (max-width:800px){.post-content h3{font-size:22px}}.post-content h4{font-size:20px}@media screen and (max-width:800px){.post-content h4{font-size:18px}}.PageNavigation{font-size:14px;display:block;width:auto;overflow:hidden}.PageNavigation a{display:block;width:50%;float:left;margin:1em 0}.PageNavigation .next{text-align:right}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#000080}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#008080}.highlight .vg{color:#008080}.highlight .vi{color:#008080}.highlight .il{color:#099}</style><link href="http://cssicurriculum.withgoogle.com/mvc-appEngine/appEngine-setup.html" rel="canonical"><link href="http://cssicurriculum.withgoogle.com/feed.xml" rel="alternate" title="Google CSSI" type="application/rss+xml"></head><body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-cssix" data-gr-c-s-loaded="true"><div class="mdl-layout__container has-scrolling-header"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button has-drawer is-small-screen has-tabs is-upgraded" data-upgraded=",MaterialLayout"><header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary mdl-color-text--white"><div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div><div class="mdl-layout--large-screen-only mdl-layout__header-row"></div><div class="mdl-layout__header-row"><a href="https://cssicurriculum.withgoogle.com/" id="cssilogo_header"></a></div><div class="mdl-layout--large-screen-only mdl-layout__header-row"></div><div class="mdl-layout__tab-bar-container"><div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-left-button"><i class="material-icons">chevron_left</i></div><div class="mdl-layout--large-screen-only mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark mdl-color-text--white mdl-js-ripple-effect--ignore-events" data-upgraded=",MaterialRipple"><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/intro.html">Intro<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/command-line.html">Command Line<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/html.html">HTML &amp; CSS<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/javascript.html">JavaScript<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/python.html">Python<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab is-active" href="https://cssicurriculum.withgoogle.com/app-engine.html">AppEngine<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/project.html">Project Week<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/git.html">Git<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a><a class="mdl-layout__tab" href="https://cssicurriculum.withgoogle.com/resources.html">Resources<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a></div><div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-right-button"><i class="material-icons">chevron_right</i></div></div></header><div class="mdl-layout__drawer" aria-hidden="true"><span class="mdl-layout-title">CSSIx Modules</span><nav class="mdl-navigation"><a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/intro.html">Intro</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/command-line.html">Command Line</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/html.html">HTML &amp; CSS</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/javascript.html">JavaScript</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/python.html">Python</a> <a class="mdl-navigation__link is-active" href="https://cssicurriculum.withgoogle.com/app-engine.html">AppEngine</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/project.html">Project Week</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/git.html">Git</a> <a class="mdl-navigation__link" href="https://cssicurriculum.withgoogle.com/resources.html">Resources</a></nav></div><main class="mdl-layout__content cssi-main"><div class="mdl-grid"><div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div><div class="cssix-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col"><div class="post"><header class="post-header"><div><div class="PageNavigation"><a class="prev" href="https://cssicurriculum.withgoogle.com/mvc-appEngine/mvc.html">« MVC Framework Lecture Guide</a> <a class="next" href="https://cssicurriculum.withgoogle.com/mvc-appEngine/templating.html">Jinja Templates Lecture Guide »</a></div></div></header><article class="post-content"><h1 id="getting-started-with-appengine-lecture-guide">Getting Started With AppEngine Lecture Guide</h1><h2 id="framing">Framing</h2><p>Now that you are familiar with the idea of an MVC, it’s time to think about how the GAE framework helps create dynamic web applications.</p><p></p><h4 id="learning-objectives">Learning objectives</h4><ul><li>Create and Launch a new GAE app</li><li>Describe the functional difference between main.py and app.yaml</li></ul><h4 id="sequence">Sequence</h4><ol><li><a href="https://cssicurriculum.withgoogle.com/mvc-appEngine/appEngine-setup.html#getting-started">Getting Started</a></li><li><a href="https://cssicurriculum.withgoogle.com/mvc-appEngine/appEngine-setup.html#two-main-gae-files">Two Main GAE Files</a></li><li><a href="https://cssicurriculum.withgoogle.com/mvc-appEngine/appEngine-setup.html#launching-a-new-app">Launching a New App</a></li><li><a href="https://cssicurriculum.withgoogle.com/mvc-appEngine/appEngine-setup.html#starting-the-meme-app">Starting the Meme App</a></li></ol><h2 id="getting-started">Getting started</h2><p>Creating an app will be confusing at first, but like everything else we’ve learned so far, you will understand the process as you practice.</p><p>The code we will use for our app’s <code class="highlighter-rouge">main.py</code> and <code class="highlighter-rouge">app.yaml</code> files came from <a href="https://cloud.google.com/appengine/docs/standard/python/quickstart">this documentation</a>.</p><p>That quickstart guide is really helpful, and documentation like it is almost always how a developer orients themself to using a new framework. While this guide will walk you through the steps to create an AppEngine project from scratch, you’ll eventually want to graduate to the official documentation, so if you’re coming back to this lesson as a reference, consider challenging yourself to use the official documentation instead.</p><p>As you go, whenever you get stuck and want to Google your answers, you’ll want to load up your search queries with terms that include <em>“Google App Engine Hello World Webapp2”</em></p><h4 id="getting-organized">Getting Organized</h4><p>If we want to start an app from scratch, we’ll want to do three things:</p><ol><li>Create a directory for our project.</li><li><code class="highlighter-rouge">cd</code> into that directory.</li><li>Create the two main AppEngine files.</li></ol><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nb">mkdir </span>first-app-engine-project
+<span class="nb">cd </span>first-app-engine-project
+<span class="nb">touch </span>app.yaml main.py
+</pre></td></tr></tbody></table></code></pre></div></div><p>Although it’s often possible within an MVC framework like AppEngine to use different organizational structures and file names, following the file conventions and organization set forth in the official documentation is almost always a best practice.</p><p>With that said, as you build more and more apps, it’s easy to inadvertently mix up your projects if each one has an <code class="highlighter-rouge">app.yaml</code> and a <code class="highlighter-rouge">main.py</code> file. Make sure you figure out how your system shows exactly which file you’re editing when two have the same name. Once you’re on your second and third projects, make sure to double check which file you’re editing by looking not only at its filename but at the whole path. Modifying the wrong one can lead some really confusing and unexpected behaviors.</p><h2 id="two-main-gae-files">Two Main GAE Files</h2><h4 id="appyaml">app.yaml</h4><p><code class="highlighter-rouge">app.yaml</code> is a file that configures the app behavior. This example has two main sections. The first section has the app parameters, which specify how it will run, and the second section routes the app.</p><div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="c1">#app.yaml</span>
+<span class="na">runtime</span><span class="pi">:</span> <span class="s">python27</span>
+<span class="na">api_version</span><span class="pi">:</span> <span class="s">1</span>
+<span class="na">threadsafe</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="na">handlers</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">url</span><span class="pi">:</span> <span class="s">/.*</span>
+  <span class="na">script</span><span class="pi">:</span> <span class="s">main.app</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p><h4 id="mainpy">main.py</h4><p>In the last lesson, we talked about the MVC framework, and main.py is the <strong>controller</strong>. It has three sections:</p><ul><li>The import section</li><li>The handlers</li><li>The app configuration and routes, which is stored in a list (or an array).</li></ul><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="c">#main.py</span>
+<span class="c"># the import section</span>
+<span class="kn">import</span> <span class="nn">webapp2</span>
+
+<span class="c"># the handler section</span>
+<span class="k">class</span> <span class="nc">MainPage</span><span class="p">(</span><span class="n">webapp2</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c">#for a get request</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">'Content-Type'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'text/plain'</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'Hello, World!'</span><span class="p">)</span> <span class="c">#the response</span>
+
+<span class="c"># the app configuration section</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">webapp2</span><span class="o">.</span><span class="n">WSGIApplication</span><span class="p">([</span>
+    <span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="n">MainPage</span><span class="p">),</span> <span class="c">#this maps the root url to the Main Page Handler</span>
+<span class="p">],</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><h4 id="launching-the-app">Launching the App</h4><p>Note that these commands are tested for the MacOS terminal - most of them will be the same, but if you’re using a different environment, there may be some small, slight differences that you’ll need to look up.</p><ul><li>To launch the app, use the command: <code class="highlighter-rouge">dev_appserver.py app.yaml</code>.<ul><li>Note that for this command to work as written, the terminal’s working directory must be the directory containing the <code class="highlighter-rouge">app.yaml</code> file.</li></ul></li><li>To open the app, open a new tab in your browser and navigate to <code class="highlighter-rouge">http://localhost:8080</code></li><li>To open the AppEngine dashboard, open a new tab in your browser and navigate to <code class="highlighter-rouge">http://localhost:8000</code></li><li>To stop the app, use the command: <kbd>⌘</kbd>+<kbd>C</kbd></li></ul><p></p><h6 id="mini-challenges">Mini-challenges</h6><ul><li>Change the response from ‘Hello, World!’ to ‘Hello CSSI’. Refresh the page to see if your change took effect.</li><li>STRETCH: Make an HTML <code class="highlighter-rouge">&lt;h1&gt;</code> header appear on the page.</li><li>STRETCH: Add a new route for <code class="highlighter-rouge">/secret</code> that says “you found the secret page!” if the user requests it. This will take two steps:<ol><li>Add another map to our configuration section.</li><li>Add another class which handles this request.</li></ol></li></ul><p></p><div class="answer_container"><div class="answer"><div></div><p></p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre><span class="c">#main.py</span>
+<span class="c"># the import section</span>
+<span class="kn">import</span> <span class="nn">webapp2</span>
+
+<span class="c"># the handler section</span>
+<span class="k">class</span> <span class="nc">MainPage</span><span class="p">(</span><span class="n">webapp2</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c">#for a get request</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">'Content-Type'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'text/html'</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'&lt;h1&gt; Hello, World! &lt;/h1&gt;'</span><span class="p">)</span> <span class="c">#the response</span>
+
+<span class="k">class</span> <span class="nc">SecretPage</span><span class="p">(</span><span class="n">webapp2</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c">#for a get request</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">'Content-Type'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'text/html'</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'&lt;h1&gt; You found the secret! &lt;/h1&gt;'</span><span class="p">)</span> <span class="c">#the response</span>
+
+<span class="c"># the app configuration section</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">webapp2</span><span class="o">.</span><span class="n">WSGIApplication</span><span class="p">([</span>
+    <span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="n">MainPage</span><span class="p">),</span> <span class="c">#this maps the root url to the Main Page Handler</span>
+    <span class="p">(</span><span class="s">'/secret'</span><span class="p">,</span> <span class="n">SecretPage</span><span class="p">),</span> <span class="c">#this maps `/secret` to the Secret Page Handler</span>
+<span class="p">],</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>If you looked carefully at the <code class="highlighter-rouge">MainHandler</code> class definition, you may have noticed that there’s a <code class="highlighter-rouge">(webapp2.RequestHandler)</code> after the class name. You don’t need to master this new syntax to move forward, but if you’re curious, click to learn why it’s written in this way.</p><div class="answer_container"><div class="answer"><div></div>To set up an analogy, have your students consider the subcategories of students in a school. A senior, for example, is a subcategory or type of student. A senior can do everything the broader category of students can do, but may also have additional privileges that not all students get (like living outside of the dorms). All seniors are students, but not all students are seniors.<p></p><p>In the same way, the parentheses here indicate that our new class <code class="highlighter-rouge">MainHandler</code> is a subcategory or type of <code class="highlighter-rouge">RequestHandler</code>, which is a class defined in <code class="highlighter-rouge">webapp2</code> (the library we imported in at the top of this file). As you remember, a library is just code someone else has written that you’re allowed to use. So instead of building something from scratch, we’re going to build off of the code that already exists in the <code class="highlighter-rouge">webapp2</code> library.</p><p>Because the Google App Engine team already defined a <code class="highlighter-rouge">RequestHandler</code> with a lot of functionality, our <code class="highlighter-rouge">MainHandler</code> instances will be able to do everything a <code class="highlighter-rouge">RequestHandler</code> can do. Our <code class="highlighter-rouge">MainHandler</code> is reusing their code with all its built-in functionality, and just adding in a few extra features that are unique to our app.</p><p>For example, we can refer to <code class="highlighter-rouge">self.response</code> even though we never took the time to define a <code class="highlighter-rouge">response</code> as part of our class. The authors of <code class="highlighter-rouge">webapp2</code> defined it as part of <code class="highlighter-rouge">RequestHandler</code> and we <em>inherited</em> it, as easily as saying that every <code class="highlighter-rouge">MainHandler</code> is a <code class="highlighter-rouge">RequestHandler</code>. (A <code class="highlighter-rouge">RequestHandler</code> is still a kind of <code class="highlighter-rouge">object</code>, so a <code class="highlighter-rouge">MainHandler</code> is too.)</p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p></p><h4 id="mini-challenges-1">Mini-challenges</h4><ul><li>In pairs, add a new handler, <code class="highlighter-rouge">AboutPage</code> that is called by a request to <code class="highlighter-rouge">/about-us</code>. The response from the <code class="highlighter-rouge">AboutPage</code> handler should be an interesting commonality that both you and your partner share.</li></ul><p><strong>Tip:</strong> Try not to reinvent the wheel – copy a previous handler and edit what you need to change.</p><h2 id="starting-the-meme-app">Starting The Meme App</h2><p></p><p>Now that you’ve spent some time understanding the basic structure of a Google App Engine application, it’s time to practice. We’re going to eventually build an app that lets a user enter text and then generates some finished product based on what they entered.</p><p>In order to get to that finished product, we’re going to need to do a few things to set up:</p><ol><li>Create a folder, and the two main GAE files inside of it.</li><li>Copy the boilerplate code from the <a href="https://cloud.google.com/appengine/docs/standard/python/quickstart">quickstart documentation</a>.</li><li>Test it to confirm that it works.</li><li>Modify the routes so that you have handles for two situations: when the user requests a main page with ‘/’ request, and for when the user is sent to the next page with a <code class="highlighter-rouge">/memeresult</code> request.</li></ol><p>If you’re stuck, click to see an example of what your <code class="highlighter-rouge">main.py</code> file might look like if you’ve got one of the routes set up.</p><div class="answer_container"><div class="answer"><div></div><p></p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">webapp2</span>
+
+<span class="k">class</span> <span class="nc">EnterInfoHandler</span><span class="p">(</span><span class="n">webapp2</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'This is where the user will enter the pic and text for their meme'</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">webapp2</span><span class="o">.</span><span class="n">WSGIApplication</span><span class="p">([</span>
+    <span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="n">EnterInfoHandler</span><span class="p">)</span>
+<span class="p">],</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p></div><button class="show_answer mdl-button mdl-js-button mdl-button--primary" value="Show" data-upgraded=",MaterialButton">Show</button><button class="hide_answer mdl-button mdl-js-button mdl-button--accent" value="Hide" data-upgraded=",MaterialButton">Hide</button></div><p></p><p>Click to see what a finished <code class="highlighter-rouge">main.py</code> file with both routes coded out might look like.</p><div class="answer_container"><div class="answer"><div></div><p></p><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">webapp2</span>
+
+<span class="k">class</span> <span class="nc">EnterInfoHandler</span><span class="p">(</span><span class="n">webapp2</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'This is where the user will enter the pic and text for their meme'</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">ShowMemeHandler</span><span class="p">(</span><span class="n">webapp2</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'This will be an awesome meme'</span><span class="p">)</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">webapp2</span><span class="o">.</span><span class="n">WSGIApplication</span><span class="p">([</span>
+    <span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="n">EnterInfoHandler</span><span class="p">),</span>
+    <span class="p">(</span><span class="s">'/memeresult'</span><span class="p">,</span> <span class="n">ShowMemeHandler</span><span class="p">)</span>
+<span class="p">],</span> <span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div><p></p></div></div></article><footer class="post-footer"><hr><div class="PageNavigation"><a class="prev" href="https://cssicurriculum.withgoogle.com/mvc-appEngine/mvc.html">« MVC Framework Lecture Guide</a> <a class="next" href="https://cssicurriculum.withgoogle.com/mvc-appEngine/templating.html">Jinja Templates Lecture Guide »</a></div></footer></div></div></div></main><footer class="mdl-mini-footer section"><div class="mdl-mini-footer__left-section"><div class="lockup va"><span class="lockup-logo lockup-dark"></span></div></div><div class="mdl-mini-footer__right-section"><ul class="mdl-mini-footer__link-list"><li><span id="site_label">CSSI - Atlanta</span></li><li>--</li><li><a href="https://www.google.com/intl/en/about/">About Google</a></li><li><a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a></li><li><a href="https://www.google.com/intl/en/policies/terms/">Terms</a></li><li><a href="https://cssicurriculum.withgoogle.com/mvc-appEngine/appEngine-setup.html#" id="signout_link">Logout</a></li><li><a href="https://cssicurriculum.withgoogle.com/mvc-appEngine/appEngine-setup.html#" id="forgetme_link">Forget Me</a></li></ul></div><script src="./Getting Started With AppEngine Lecture Guide_files/firebase-app.js.download"></script><script src="./Getting Started With AppEngine Lecture Guide_files/firebase-auth.js.download"></script><script src="./Getting Started With AppEngine Lecture Guide_files/firebaseui.js.download"></script><link href="./Getting Started With AppEngine Lecture Guide_files/firebaseui.css" rel="stylesheet" type="text/css"><script>
+  function getCookie(name) {
+    let dc = document.cookie;
+    let prefix = name + "=";
+    let begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+      begin = dc.indexOf(prefix);
+      if (begin != 0) return null;
+    }
+    begin += 2;
+    let end = document.cookie.indexOf(";", begin);
+    if (end == -1) {
+      end = dc.length;
+    }
+    return decodeURI(dc.substring(begin + prefix.length, end));
+  }
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD_NpvZGlms1zebBgfE4RZPCim5irYGbG4",
+    authDomain: "cssi-curriculum.firebaseapp.com",
+    databaseURL: "https://cssi-curriculum.firebaseio.com",
+    projectId: "cssi-curriculum",
+    storageBucket: "cssi-curriculum.appspot.com",
+    messagingSenderId: "443846997353"
+  };
+  // Firebase log-in widget
+  function configureFirebaseLoginWidget() {
+    let uiConfig = {
+      signInSuccessUrl: '/',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        {
+            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            // Whether the display name should be displayed in the Sign Up page.
+            requireDisplayName: false,
+        },
+      ],
+      callbacks: {
+        signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+          let user = authResult.user;
+          let credential = authResult.credential;
+          let isNewUser = authResult.additionalUserInfo.isNewUser;
+          let providerId = authResult.additionalUserInfo.providerId;
+          let operationType = authResult.operationType;
+          // Do something with the returned AuthResult.
+          // Return type determines whether we continue the redirect automatically
+          // or whether we leave that to developer to handle.
+          return true;
+        },
+        signInFailure: function(error) {
+          // Some unrecoverable error occurred during sign-in.
+          // Return a promise when error handling is completed and FirebaseUI
+          // will reset, clearing any UI. This commonly occurs for error code
+          // 'firebaseui/anonymous-upgrade-merge-conflict' when merge conflict
+          // occurs. Check below for more details on this.
+          return handleUIError(error);
+        },
+      },
+      // Terms of service url
+      'tosUrl': 'https://www.google.com/intl/en/policies/terms/',
+    };
+
+    let user = firebase.auth().currentUser;
+    if (!user && document.getElementById('firebaseui-auth-container')) {
+      let ui = new firebaseui.auth.AuthUI(firebase.auth());
+      ui.start('#firebaseui-auth-container', uiConfig);
+    }
+  }
+
+  function updateUserToken(user) {
+    let oldCookie = getCookie('idToken');
+    if (user) {
+      let refresh_token = getCookie('needRefreshToken');
+      user.getIdToken(refresh_token == 'true').then(function(idToken) {
+        document.cookie = "idToken=" + idToken + "; path=/";
+        if (!oldCookie) {
+          location.reload();
+        }
+      });
+    } else {
+      console.log("Removing auth token");
+      document.cookie = "idToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+      if (oldCookie) {
+        location.reload();
+      }
+    }
+  }
+
+  function configureFirebaseLogin() {
+    firebase.initializeApp(config);
+    firebase.auth().onAuthStateChanged(updateUserToken);
+    firebase.auth().onIdTokenChanged(function() {console.log("token changed");});
+  }
+
+  function signOut() {
+    firebase.auth().signOut();
+    window.location = "/";
+    return false;
+  }
+
+  function forgetMe() {
+    let user = firebase.auth().currentUser;
+    user.delete().then(function() {
+      console.log("User deleted");
+    }).catch(function(error) {
+      console.log("Error deleting the user " + error);
+    });
+    firebase.auth().signOut();
+    window.location = "/";
+    return false;
+  }
+
+  function sendVerificationEmail() {
+    let user = firebase.auth().currentUser;
+    if (user && !user.emailVerified) {
+      user.sendEmailVerification().then(function() {
+          console.log("Verification email sent.");
+        }).catch(function(error) {
+          console.log("An error happened while sending the verification email.");
+        });
+    } else if (user) {
+      console.log("Email already verified");
+    } else {
+      console.log("User not logged in");
+    }
+    console.log("Removing auth token");
+    document.cookie = "idToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.querySelector('#send_verification_button').style.display = 'None';
+    document.querySelector('#verification_sent').style.display = 'block';
+  }
+
+  function checkAndRestoreCookie(){
+    let user = firebase.auth().currentUser;
+  }
+
+  function showAnswer(event) {
+    let show_answer_button = event.currentTarget;
+    let answer_container = show_answer_button.parentElement;
+    toggleAnswer(answer_container, true);
+  }
+
+  function hideAnswer(event) {
+    let show_answer_button = event.currentTarget;
+    let answer_container = show_answer_button.parentElement;
+    toggleAnswer(answer_container, false);
+  }
+
+  function toggleAnswer(container, visible) {
+    let answer = container.querySelector('.answer');
+    answer.style.display = visible ? 'block' : 'none';
+    let hide_answer_button = container.querySelector('.hide_answer');
+    hide_answer_button.style.display = visible ? 'block' : 'none';
+    let show_answer_button = container.querySelector('.show_answer');
+    show_answer_button.style.display = visible ? 'none' : 'block';
+  }
+
+  function toggleStudentViewCookie(event) {
+    const new_value = event.target.checked;
+    document.cookie = "student_view=" + new_value + ";path=/";
+    location.reload();
+  }
+
+  window.addEventListener('load', function() {
+    configureFirebaseLogin();
+    configureFirebaseLoginWidget();
+    //checkAndRestoreCookie();
+    let signout_link = document.querySelector('#signout_link');
+    if (signout_link) {
+      signout_link.onclick = signOut;
+    }
+    let forgetme_link = document.querySelector('#forgetme_link');
+    if (forgetme_link) {
+      forgetme_link.onclick = forgetMe;
+    }
+    let email_verification_btn = document.querySelector('#send_verification_button');
+    if (email_verification_btn) {
+      email_verification_btn.onclick = sendVerificationEmail;
+    }
+    let show_answer_btns = document.querySelectorAll('.show_answer');
+    show_answer_btns.forEach( function(element) {
+      element.onclick = showAnswer;
+    });
+    let hide_answer_btns = document.querySelectorAll('.hide_answer');
+    hide_answer_btns.forEach( function(element) {
+      element.onclick = hideAnswer;
+    });
+    // Student View checkbox not available on all pages, if present,
+    // it can be used to override the user role, so that instructors can view
+    // content as students.
+    let student_view_flag = document.querySelector('#chk_student_view');
+    if (student_view_flag) {
+      student_view_flag.checked = JSON.parse(getCookie('student_view'));
+      student_view_flag.onclick = toggleStudentViewCookie;
+    }
+    // Select the proper element in the site selection view based on the
+    // existing cookies.
+    let selected_site = getCookie('site');
+    let site_selector_list = document.querySelectorAll('.site_radio');
+    [].forEach.call(site_selector_list, (element) => {
+      element.addEventListener('click', () => {
+        console.log('Clicked ' + element.value);
+        document.cookie = "site=" + element.value + ";path=/";
+        document.querySelector('#site_label').innerText = element.dataset.label;
+      });
+    });
+    if (selected_site && site_selector_list.length > 0) {
+      [].forEach.call(site_selector_list, (element) => {
+        console.log(selected_site);
+        if (element.value === selected_site) {
+          element.checked = true;
+        } else {
+          element.checked = false;
+        }
+      });
+      console.log(site_selector_list);
+    }
+
+  })
+</script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101261509-1', 'auto');
+  ga('send', 'pageview');
+</script></footer><div class="mdl-layout__obfuscator"></div></div></div></body></html>
